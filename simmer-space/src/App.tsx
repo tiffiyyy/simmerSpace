@@ -5,6 +5,7 @@ import './App.css'
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import SecondPage from "./SecondPage";
+import ThirdPage from "./ThirdPage"; 
 import { initScene } from "@webspatial/react-sdk";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Router basename={__XR_ENV_BASE__}>
       <Routes>
         <Route path="/second-page" element={<SecondPage />} />
+        <Route path="/third-page" element={<ThirdPage />} />
         <Route
           path="/"
           element={

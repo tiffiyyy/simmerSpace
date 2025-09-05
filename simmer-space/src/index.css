@@ -67,6 +67,7 @@ button:focus-visible {
   }
 }
 
+/*
 html.is-spatial {
   background-color: transparent;
   --xr-background-material: transparent;
@@ -100,3 +101,4 @@ html.is-spatial {
     }
   }
 }
+*/

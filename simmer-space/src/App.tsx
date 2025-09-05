@@ -42,9 +42,9 @@ function App() {
                 <h2>Open Second Page</h2>
                 <div>{/* Clicking a link will open a new scene each time */}</div>
                 <p>
-                  <Link to="/second-page" target="_blank">
+                  <a href="/second-page" target="_blank" enable-xr>
                     Open Second Page with a Link
-                  </Link>
+                  </a>
                 </p>
                 <div>{/* Clicking a button will only open one scene */}</div>
                 <p>

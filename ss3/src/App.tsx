@@ -2,8 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import SecondPage from "./SecondPage";
-//import { initScene } from "@webspatial/react-sdk";
+import { initScene } from "@webspatial/react-sdk";
 
+// import recipe steps for che bap below 
+import step1 from "./step1"; 
 
 
 type Ingredient = {
@@ -27,7 +29,8 @@ function App() {
     <>
     <Router basename={__XR_ENV_BASE__}>
       <Routes>
-        <Route path="/second-page" element={<SecondPage />} />
+        {/*<Route path="/second-page" element={<SecondPage />} />*/}
+        <Route path="/step1" element={<step1 />} />
         <Route
           path="/"
           element={
@@ -50,15 +53,27 @@ function App() {
                 </ul>
             </div>
             <div className="card" style={{ marginTop: "0px" }}>
-                  <h2>Open Second Page</h2>
+                <h2>Open Second Page</h2>
+                <div>{/* Clicking a link will open a new scene each time */}</div>
                 <p>
                   <Link to="/second-page" target="_blank">
                     Open Second Page with a Link
                   </Link>
                 </p>
+                <div>{/* Clicking a button will only open one scene */}</div>
                 <p>
                   <button
                     onClick={() => {
+                      // before scene opens, resize the secondScene window 
+                      initScene("secondScene", prevConfig => {
+                        return {
+                          ...prevConfig,
+                          defaultSize: {
+                            width: 500,
+                            height: 500,
+                          },
+                        };
+                      });
                       window.open(`${__XR_ENV_BASE__}/second-page`, "secondScene");
                     }}>
                     Open Second Page with a Button

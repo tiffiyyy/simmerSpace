@@ -1,8 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import "./App.css";
-
+import "../App.css";
 import { useState } from "react";
-import "./App.css";
 
 function step1() {
     const navigate = useNavigate();

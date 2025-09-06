@@ -5,7 +5,7 @@ import SecondPage from "./SecondPage";
 import { initScene } from "@webspatial/react-sdk";
 
 // import recipe steps for che bap below 
-import step1 from "./step1"; 
+import Step1 from "./che-bap/step1"; 
 
 
 type Ingredient = {
@@ -30,7 +30,7 @@ function App() {
     <Router basename={__XR_ENV_BASE__}>
       <Routes>
         {/*<Route path="/second-page" element={<SecondPage />} />*/}
-        <Route path="/step1" element={<step1 />} />
+        <Route path="/s1" element={<Step1 />} />
         <Route
           path="/"
           element={
@@ -53,11 +53,11 @@ function App() {
                 </ul>
             </div>
             <div className="card" style={{ marginTop: "0px" }}>
-                <h2>Open Second Page</h2>
+                <h2>Let's begin cooking Che Bap!</h2>
                 <div>{/* Clicking a link will open a new scene each time */}</div>
                 <p>
-                  <Link to="/second-page" target="_blank">
-                    Open Second Page with a Link
+                  <Link to="/s1" target="_blank">
+                    New Recipe Window
                   </Link>
                 </p>
                 <div>{/* Clicking a button will only open one scene */}</div>
@@ -65,7 +65,7 @@ function App() {
                   <button
                     onClick={() => {
                       // before scene opens, resize the secondScene window 
-                      initScene("secondScene", prevConfig => {
+                      initScene("step1", prevConfig => {
                         return {
                           ...prevConfig,
                           defaultSize: {
@@ -74,9 +74,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/second-page`, "secondScene");
+                      window.open(`${__XR_ENV_BASE__}/s1`, "step1");
                     }}>
-                    Open Second Page with a Button
+                    Reload Existing Recipe
                   </button>
                 </p>
             </div>

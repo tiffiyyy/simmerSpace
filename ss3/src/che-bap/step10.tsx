@@ -1,17 +1,15 @@
 import { useNavigate } from 'react-router-dom';
+import "../App.css";
 
-import { useState } from "react";
-import "./App.css";
-
-function step10() {
+function Step10() {
     const navigate = useNavigate();
 
   return (
     <div className="App">
-      <h1>Step 5</h1>
+      <h1>Step 10</h1>
       <div className="card">
         <p>pour the mixture into the pot and stir for 10-15 mins until the chè thickens</p>
-        <button onClick={() => navigate('/step11')}>
+        <button onClick={() => navigate('/s11')}>
           next step
         </button>
       </div>
@@ -19,4 +17,4 @@ function step10() {
   );
 }
 
-export default step10;
+export default Step10;

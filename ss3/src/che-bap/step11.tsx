@@ -1,14 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import "../App.css";
 
-import { useState } from "react";
-import "./App.css";
-
-function step11() {
+function Step11() {
     const navigate = useNavigate();
 
   return (
     <div className="App">
-      <h1>Step 5</h1>
+      <h1>Step 11</h1>
       <div className="card">
         <p>11. once the chè clears up, it’ll be done </p>
         <button onClick={() => navigate('/')}>
@@ -19,4 +17,4 @@ function step11() {
   );
 }
 
-export default step11;
+export default Step11;

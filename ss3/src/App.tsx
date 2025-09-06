@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import SecondPage from "./SecondPage";
+//import SecondPage from "./SecondPage";
 import { initScene } from "@webspatial/react-sdk";
 
 // import recipe steps for che bap below 
@@ -41,7 +41,7 @@ function App() {
     <>
     <Router basename={__XR_ENV_BASE__}>
       <Routes>
-        <div>{/* Routing for steps to make Chè Bắp */}</div>
+      {/* Routing for steps to make Chè Bắp */}
         <Route path="/s1" element={<Step1 />} />
         <Route path="/s2" element={<Step2 />} />
         <Route path="/s3" element={<Step3 />} />
@@ -102,7 +102,7 @@ function App() {
                     Reload Existing Recipe
                   </button>
                 </p>
-            </div>
+              </div>
             </>
           }
         />

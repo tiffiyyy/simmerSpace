@@ -1,9 +1,7 @@
 import { useNavigate } from 'react-router-dom';
+import "../App.css";
 
-import { useState } from "react";
-import "./App.css";
-
-function step3() {
+function Step3() {
     const navigate = useNavigate();
 
   return (
@@ -12,7 +10,7 @@ function step3() {
       <div className="card">
         <p>boil the cobs for 10-15 mins</p>
         <p><strong>note</strong>: this is to infuse the water with corn flavoring and scents</p>
-        <button onClick={() => navigate('/step4')}>
+        <button onClick={() => navigate('/s4')}>
           next step
         </button>
       </div>
@@ -20,4 +18,4 @@ function step3() {
   );
 }
 
-export default step3;
+export default Step3;

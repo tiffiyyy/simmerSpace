@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+// 1. Define the type
+type Ingredient = {
+  name: string;
+  checked: boolean;
+};
+
+export default function IngredientChecklist() {
+  // 2. Initial ingredient list
+  const [ingredients, setIngredients] = useState<Ingredient[]>([
+    { name: "Tomato", checked: false },
+    { name: "Cheese", checked: false },
+    { name: "Basil", checked: false },
+  ]);
+
+  // 3. Function to toggle a checkbox
+  const toggleIngredient = (index: number) => {
+    const newIngredients = [...ingredients]; // copy array
+    newIngredients[index].checked = !newIngredients[index].checked; // flip the value
+    setIngredients(newIngredients); // update state
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="flex">
+      <h2>Ingredient Checklist</h2>
+      <ul className="list-none p-0 m-0">
+        {ingredients.map((ingredient, index) => (
+          <li key={ingredient.name}>
+            <label>
+              <input
+                type="checkbox"
+                checked={ingredient.checked}
+                onChange={() => toggleIngredient(index)}
+              />
+              {ingredient.name}
+            </label>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
-
-export default App

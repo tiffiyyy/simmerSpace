@@ -1,17 +1,15 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 function Step1() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="App">
       <h1>Step 1</h1>
       <div className="card">
-        <p>strip the corn until it's just the cob </p>
-        <button onClick={() => navigate('/s2')}>
-          next step
-        </button>
+        <p>Strip the corn until it's just the cob </p>
+        <button onClick={() => navigate("/s2")}>Next Step</button>
       </div>
     </div>
   );

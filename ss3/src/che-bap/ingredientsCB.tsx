@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { initScene } from "@webspatial/react-sdk";
 import { useState } from "react";
 import "../App.css";

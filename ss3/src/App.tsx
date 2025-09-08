@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { initScene } from "@webspatial/react-sdk";
 
 // import recipe steps for che bap below
@@ -63,11 +63,11 @@ function App() {
                   >
                     Chè Bắp Recipe 🌽
                   </button>
-                  <p>
+                  {/* <p>
                     <Link to="/icb" target="_blank">
                       Chè Bắp Recipe 🌽
                     </Link>
-                  </p>
+                  </p> */}
                 </div>
               </>
             }

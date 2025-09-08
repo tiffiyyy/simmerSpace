@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { initScene } from "@webspatial/react-sdk";
 import { useState } from "react";
 import "../App.css";
 
@@ -43,17 +44,11 @@ function IngredientsCB() {
       </div>
       <div className="card" style={{ marginTop: "0px" }}>
         <h2>Let's begin cooking Bà Nội's Chè Bắp 🌽!</h2>
-        <div>{/* Clicking a link will open a new scene each time */}</div>
-        <p>
-          <Link to="/s1" target="_blank">
-            New Recipe Window
-          </Link>
-        </p>
         <div>{/* Clicking a button will only open one scene */}</div>
         <p>
           <button
             onClick={() => {
-              // before scene opens, resize the secondScene window
+              // before recipe opens, resize the window
               initScene("step1", (prevConfig) => {
                 return {
                   ...prevConfig,
@@ -66,9 +61,10 @@ function IngredientsCB() {
               window.open(`${__XR_ENV_BASE__}/s1`, "step1");
             }}
           >
-            Reload Existing Recipe
+            Open Recipe
           </button>
         </p>
+        <p><strong>Note</strong>: If you would like to reload your current recipe screen, please press this button agian.</p>
       </div>
     </div>
   );

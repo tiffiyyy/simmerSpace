@@ -15,6 +15,7 @@ import Step9 from "./che-bap/step9";
 import Step10 from "./che-bap/step10";
 import Step11 from "./che-bap/step11";
 import IngredientsCB from "./che-bap/ingredientsCB";
+import Steps from "./steps";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/s10" element={<Step10 />} />
           <Route path="/s11" element={<Step11 />} />
           <Route path="/icb" element={<IngredientsCB />} />
+          <Route path="/recipe/:recipeId/step/:stepNumber" element={<Steps />} />
 
           <Route
             path="/"
@@ -61,7 +63,15 @@ function App() {
                       window.open(`${__XR_ENV_BASE__}/icb`, "ingredientsCB");
                     }}
                   >
-                    Chè Bắp Recipe 🌽
+                    Chè Bắp Ingredients 🌽
+                  </button>
+                  <button
+                    onClick={() => {
+                      // Navigate to the first step of Chè Bắp recipe
+                      window.location.href = "/recipe/che-bap/step/1";
+                    }}
+                  >
+                    Chè Bắp Recipe Steps 🌽
                   </button>
                   {/* <p>
                     <Link to="/icb" target="_blank">

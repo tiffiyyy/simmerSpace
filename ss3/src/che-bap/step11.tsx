@@ -8,7 +8,7 @@ function Step11() {
     <div className="App">
       <h1>Step 11</h1>
       <div className="card">
-        <p>Once the chè clears up, it’ll be done </p>
+        <p>Once the chè clears up, it'll be done </p>
         <button onClick={() => navigate("/")}>Return Home</button>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import {useNavigate } from "react-router-dom";
+//import {useNavigate } from "react-router-dom";
 import { initScene } from "@webspatial/react-sdk";
 import { useState } from "react";
 import "../App.css";
@@ -9,7 +9,7 @@ type Ingredient = {
 };
 
 function IngredientsCB() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const [ingredients, setIngredients] = useState<Ingredient[]>([
     { name: "Bắp (corn) (one per person)", checked: false },
     { name: "4 cups nước (water) ", checked: false },
@@ -58,7 +58,7 @@ function IngredientsCB() {
                   },
                 };
               });
-              window.open(`${__XR_ENV_BASE__}/s1`, "step1");
+              window.open(`${__XR_ENV_BASE__}/recipe/che-bap/step/1`, "step1");
             }}
           >
             Open Recipe

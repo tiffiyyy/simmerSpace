@@ -1,0 +1,75 @@
+[
+    {
+      "id": "che-bap",
+      "name": "Chè Bắp",
+      "ingredients": [
+        { "item": "Bắp (Corn)", "quantity": "1  per person", "unit": "ears" },
+        { "item": "Nước (Water)", "quantity": "4", "unit": "cups" },
+        { "item": "đừng (Sugar)", "quantity": "1", "unit": "cup" },
+        { "item": "bột năng (Tapioca Starch)", "quantity": "1", "unit": "tbsp" }
+      ],
+      "steps": [
+        {
+            "step":"Strip the corn until it's just the cob",
+            "note":""
+        },
+        {
+            "step":"Place four cups of water into a pot and place the cobs inside.",
+            "note":""
+        },
+        {
+            "step":"Boil the cobs for 10-15 mins", 
+            "note":"This is to infuse the water with corn flavoring and scents"
+        },
+        {
+            "step":"Remove the cobs and put in the corn bits",
+            "note":""
+        },
+        {
+            "step":"Boil the corn bits for 10-15 mins",
+            "note":"This time may differ depending on the quality/freshness of the corn"
+        },
+        {
+            "step":"Add the cup of sugar and stir",
+            "note":""
+        },
+        {
+            "step":"Continue to add sugar to taste",
+            "note":""
+        },
+        {
+            "step":"Now make the tapioca starch mixture",
+            "note":""
+        },
+        {
+            "step":"Combine the tapioca starch into a cup of water to loosen/dissolve the starch",
+            "note":""
+        },
+        {
+            "step":"Pour the mixture into the pot and stir for 10-15 mins until the chè thickens",
+            "note":""
+        },
+        {
+            "step":"Once the chè clears up, it'll be done",
+            "note":""
+        }
+      ]
+    },
+    {
+      "id": "pho",
+      "name": "Phở",
+      "ingredients": [
+        { "item": "Rice noodles", "quantity": "200", "unit": "g" },
+        { "item": "Beef bones", "quantity": "1", "unit": "kg" },
+        { "item": "Onion", "quantity": "1", "unit": "" },
+        { "item": "Ginger", "quantity": "50", "unit": "g" },
+        { "item": "Spices", "quantity": "to taste", "unit": "" }
+      ],
+      "steps": [
+        "Simmer beef bones for broth.",
+        "Toast onion, ginger, and spices.",
+        "Cook rice noodles until soft.",
+        "Assemble noodles, broth, and beef slices."
+      ]
+    }
+  ]

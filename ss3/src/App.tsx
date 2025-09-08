@@ -1,7 +1,5 @@
-import { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-//import SecondPage from "./SecondPage";
 import { initScene } from "@webspatial/react-sdk";
 
 // import recipe steps for che bap below
@@ -18,25 +16,8 @@ import Step10 from "./che-bap/step10";
 import Step11 from "./che-bap/step11";
 import IngredientsCB from "./che-bap/ingredientsCB";
 
-type Ingredient = {
-  name: string;
-  checked: boolean;
-};
 
 function App() {
-  const [ingredients, setIngredients] = useState<Ingredient[]>([
-    { name: "Bắp (corn) (one per person)", checked: false },
-    { name: "4 cups nước (water) ", checked: false },
-    { name: "1 cup đừng (sugar) (then add to taste)", checked: false },
-    { name: "1 tbsp bột năng (tapioca starch)", checked: false },
-  ]);
-
-  const toggleIngredient = (index: number) => {
-    const newIngredients = [...ingredients]; // copy array
-    newIngredients[index].checked = !newIngredients[index].checked; // flip the value
-    setIngredients(newIngredients); // update state
-  };
-
   return (
     <>
       <Router basename={__XR_ENV_BASE__}>
@@ -80,11 +61,11 @@ function App() {
                       window.open(`${__XR_ENV_BASE__}/icb`, "ingredientsCB");
                     }}
                   >
-                    New Recipe Window
+                    Chè Bắp Recipe 🌽
                   </button>
                   <p>
                     <Link to="/icb" target="_blank">
-                      New Recipe Window
+                      Chè Bắp Recipe 🌽
                     </Link>
                   </p>
                 </div>

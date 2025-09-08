@@ -9,7 +9,7 @@ function Step11() {
       <h1>Step 11</h1>
       <div className="card">
         <p>Once the chè clears up, it’ll be done </p>
-        <button onClick={() => navigate("/")}>Next Step</button>
+        <button onClick={() => navigate("/")}>Return Home</button>
       </div>
     </div>
   );

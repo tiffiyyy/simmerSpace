@@ -19,4 +19,4 @@ Wanna come along with us for this ride? Check our our socials here! <br/>
 [Ryan's LinkedIn](https://www.linkedin.com/in/ryan-le-b44854382/) <br/><br/>
 
 
-Thank you for coming along with us for <3 
+Thank you for checking out our project <3 

@@ -1,0 +1,1 @@
+const XR_ENV_BASE: string;

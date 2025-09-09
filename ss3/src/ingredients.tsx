@@ -7,6 +7,8 @@ import recipesData from "./recipes.json";
 interface Recipe {
   id: string;
   name: string;
+  estimatedTime: number;
+  description: string;
   ingredients: Array<{
     item: string;
     quantity: string;
@@ -70,9 +72,27 @@ function Ingredients() {
     );
   }
 
+  const formatTime = (minutes: number) => {
+    if (minutes < 60) {
+      return `${minutes} minutes`;
+    } else {
+      const hours = Math.floor(minutes / 60);
+      const remainingMinutes = minutes % 60;
+      if (remainingMinutes === 0) {
+        return `${hours} hour${hours > 1 ? 's' : ''}`;
+      } else {
+        return `${hours} hour${hours > 1 ? 's' : ''} ${remainingMinutes} minutes`;
+      }
+    }
+  };
+
   return (
     <div className="App">
       <h1>{recipe.name} Ingredients</h1>
+      <div style={{ marginBottom: '20px', padding: '10px', backgroundColor: '#f0f0f0', borderRadius: '5px' }}>
+        <p><strong>⏱️ Estimated Time:</strong> {formatTime(recipe.estimatedTime)}</p>
+        <p><strong>📝 Description:</strong> {recipe.description}</p>
+      </div>
       <div>
         <h2>Ingredient Checklist</h2>
         <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>

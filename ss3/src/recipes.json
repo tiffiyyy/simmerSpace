@@ -261,7 +261,7 @@
         ],
         "steps": [
           { "step": "Soak mung beans overnight", "note": "", "time": 0 },
-          { "step": "Soak dried shrimp in warm water for 2 hours", "note": "", "time": 0 },
+          { "step": "Soak dried shrimp in warm water for 2 hours", "note": "", "time": 120 },
           { "step": "Boil soaked mung beans in water until tender (about 30 minutes)", "note": "", "time": 30 },
           { "step": "Mash the cooked mung beans into a thick paste", "note": "", "time": 0 },
           { "step": "Drain and mince the shrimp finely", "note": "", "time": 0 },

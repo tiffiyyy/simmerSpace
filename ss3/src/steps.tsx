@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./App.css";
 import recipesData from "./recipes.json";
+import { initScene } from "@webspatial/react-sdk";
+
 
 // creating a custom type: Recipe (like a struct) 
 interface Recipe {
@@ -15,6 +17,7 @@ interface Recipe {
   steps: Array <{       // array storing steps in recipe 
     step: string;       // written step 
     note: string;       // any additional information 
+    time: number;
   }> | string[];
 }
 
@@ -104,9 +107,11 @@ function Steps() {
   const isFirstStep = currentStep === 0;
   const isLastStep = currentStep === recipe.steps.length - 1;
 
-  // Handle both step formats: object with step/note or simple string
+  // Handle both step formats: object with step/note/time or simple string
   const stepText = typeof step === 'string' ? step : step.step;
   const stepNote = typeof step === 'string' ? null : step.note;
+  const stepTime = typeof step === 'string' ? 0 : step.time;
+  const needsTimer = stepTime > 0;
 
   return (
     <div className="App">
@@ -118,6 +123,38 @@ function Steps() {
           <p style={{ fontStyle: 'italic', color: '#666' }}>
             <em>Note: {stepNote}</em>
           </p>
+        )}
+        
+        {needsTimer && (
+          <div style={{ marginTop: '15px', padding: '10px', backgroundColor: '#e8f4fd', borderRadius: '5px', border: '1px solid #b3d9ff' }}>
+            <p style={{ margin: '0 0 10px 0', fontWeight: 'bold', color: '#0066cc' }}>
+              ⏱️ This step requires {stepTime} minutes
+            </p>
+            <button 
+              onClick={() => {
+                initScene("timer", (prevConfig) => {
+                  return {
+                    ...prevConfig,
+                    defaultSize: {
+                      width: 400,
+                      height: 300,
+                    },
+                  };
+                });
+                window.open(`/timer/${recipeId}/${currentStep + 1}/${stepTime}`, "timer");
+              }}
+              style={{ 
+                backgroundColor: '#0066cc', 
+                color: 'white', 
+                border: 'none', 
+                padding: '8px 16px', 
+                borderRadius: '4px',
+                cursor: 'pointer'
+              }}
+            >
+              Start Timer
+            </button>
+          </div>
         )}
         
         <div style={{ marginTop: '20px', display: 'flex', gap: '10px', justifyContent: 'center' }}>

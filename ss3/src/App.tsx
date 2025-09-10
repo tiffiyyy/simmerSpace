@@ -7,6 +7,7 @@ import { initScene } from "@webspatial/react-sdk";
 // import recipe steps and ingredients below
 import Steps from "./steps";
 import Ingredients from "./ingredients";
+import Timer from "./timer";
 
 function App() {
   return (
@@ -19,10 +20,9 @@ function App() {
             element={<Ingredients />}
           />
           {/* route to recipe page */}
-          <Route
-            path={`/recipe/:recipeId/step/:stepNumber`}
-            element={<Steps />}
-          />
+          <Route path={`/recipe/:recipeId/step/:stepNumber`} element={<Steps />} />
+          {/* route to timer page */}
+          <Route path={`/timer/:recipeId/:stepNumber/:duration`} element={<Timer />} />
           {/* route to main menu */}
           <Route
             path="/"

@@ -1,13 +1,12 @@
 import "./App.css";
-// import routing components  
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-// import webspatial SDK 
+// import routing components
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import webspatial SDK
 import { initScene } from "@webspatial/react-sdk";
 
 // import recipe steps and ingredients below
 import Steps from "./steps";
 import Ingredients from "./ingredients";
-
 
 function App() {
   return (
@@ -15,9 +14,15 @@ function App() {
       <Router basename={__XR_ENV_BASE__}>
         <Routes>
           {/* route to ingredients page */}
-          <Route path={`/recipe/:recipeId/ingredients`} element={<Ingredients />} />
+          <Route
+            path={`/recipe/:recipeId/ingredients`}
+            element={<Ingredients />}
+          />
           {/* route to recipe page */}
-          <Route path={`/recipe/:recipeId/step/:stepNumber`} element={<Steps />} />
+          <Route
+            path={`/recipe/:recipeId/step/:stepNumber`}
+            element={<Steps />}
+          />
           {/* route to main menu */}
           <Route
             path="/"
@@ -44,7 +49,10 @@ function App() {
                       });
                       // Use setTimeout to ensure the new window opens without affecting current window
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/che-bap/ingredients`, "ingredientsCB");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/che-bap/ingredients`,
+                          "ingredientsCB"
+                        );
                       }, 0);
                     }}
                   >
@@ -65,7 +73,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/pho-bo/ingredients`, "ingredientsPho");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/pho-bo/ingredients`,
+                          "ingredientsPho"
+                        );
                       }, 0);
                     }}
                   >
@@ -86,7 +97,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/cha-gio/ingredients`, "ingredientsChaGio");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/cha-gio/ingredients`,
+                          "ingredientsChaGio"
+                        );
                       }, 0);
                     }}
                   >
@@ -107,7 +121,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/goi-cuon/ingredients`, "ingredientsGoiCuon");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/goi-cuon/ingredients`,
+                          "ingredientsGoiCuon"
+                        );
                       }, 0);
                     }}
                   >
@@ -128,7 +145,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/banh-beo/ingredients`, "ingredientsBanhBeo");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/banh-beo/ingredients`,
+                          "ingredientsBanhBeo"
+                        );
                       }, 0);
                     }}
                   >
@@ -149,7 +169,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/banh-xeo/ingredients`, "ingredientsBanhXeo");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/banh-xeo/ingredients`,
+                          "ingredientsBanhXeo"
+                        );
                       }, 0);
                     }}
                   >
@@ -170,7 +193,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/banh-chung/ingredients`, "ingredientsBanhChung");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/banh-chung/ingredients`,
+                          "ingredientsBanhChung"
+                        );
                       }, 0);
                     }}
                   >
@@ -192,7 +218,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/banh-xanh/ingredients`, "ingredientsBanhXanh");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/banh-xanh/ingredients`,
+                          "ingredientsBanhXanh"
+                        );
                       }, 0);
                     }}
                   >
@@ -213,7 +242,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/banh-cam/ingredients`, "ingredientsBanhCam");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/banh-cam/ingredients`,
+                          "ingredientsBanhCam"
+                        );
                       }, 0);
                     }}
                   >
@@ -234,7 +266,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/mi-hoanh-thanh/ingredients`, "ingredientsMiHoanhThanh");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/mi-hoanh-thanh/ingredients`,
+                          "ingredientsMiHoanhThanh"
+                        );
                       }, 0);
                     }}
                   >
@@ -255,7 +290,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/thit-nuong/ingredients`, "ingredientsThitNuong");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/thit-nuong/ingredients`,
+                          "ingredientsThitNuong"
+                        );
                       }, 0);
                     }}
                   >
@@ -276,7 +314,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/thit-kho-trung/ingredients`, "ingredientsThitKhoTrung");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/thit-kho-trung/ingredients`,
+                          "ingredientsThitKhoTrung"
+                        );
                       }, 0);
                     }}
                   >
@@ -297,7 +338,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/hu-tieu/ingredients`, "ingredientsHuTieu");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/hu-tieu/ingredients`,
+                          "ingredientsHuTieu"
+                        );
                       }, 0);
                     }}
                   >
@@ -318,13 +362,16 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/banh-mi/ingredients`, "ingredientsBanhMi");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/banh-mi/ingredients`,
+                          "ingredientsBanhMi"
+                        );
                       }, 0);
                     }}
                   >
                     Bánh Mì 🥖
                   </button>
-                  
+
                   {/* button to "Bún Bò Huế 🌶️" page */}
                   <button
                     onClick={(e) => {
@@ -339,7 +386,10 @@ function App() {
                         };
                       });
                       setTimeout(() => {
-                        window.open(`${__XR_ENV_BASE__}/recipe/bun-bo-hue/ingredients`, "ingredientsBunBoHue");
+                        window.open(
+                          `${__XR_ENV_BASE__}/recipe/bun-bo-hue/ingredients`,
+                          "ingredientsBunBoHue"
+                        );
                       }, 0);
                     }}
                   >

@@ -3,25 +3,31 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./App.css";
 import recipesData from "./recipes.json";
 
+// creating a custom type: Recipe (like a struct) 
 interface Recipe {
-  id: string;
-  name: string;
-  ingredients: Array<{
-    item: string;
-    quantity: string;
-    unit: string;
+  id: string;           // id of food (to be used to locate selected recipe from recipes.json)
+  name: string;         // name of food (to be displayed)
+  ingredients: Array <{ // array storing ingredients required for recipe 
+    item: string;       // name of ingredient 
+    quantity: string;   // numerical measurement 
+    unit: string;       // unit of measurement 
   }>;
-  steps: Array<{
-    step: string;
-    note: string;
+  steps: Array <{       // array storing steps in recipe 
+    step: string;       // written step 
+    note: string;       // any additional information 
   }> | string[];
 }
 
+// 
 function Steps() {
   const navigate = useNavigate();
+  // returns URL parameters (recipeId, stepNumber) from router (in App.tsx) 
   const { recipeId, stepNumber } = useParams<{ recipeId: string; stepNumber: string }>();
+  // declares recipe as a null piece of state which will either be a Recipe or null (set using setRecipe())
   const [recipe, setRecipe] = useState<Recipe | null>(null);
+  // declares currentStep as 0; can be updated using setCurrentStep() 
   const [currentStep, setCurrentStep] = useState(0);
+  // declares isLoading as true; can be updated using setIsLoading() 
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

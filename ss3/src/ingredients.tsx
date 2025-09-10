@@ -32,21 +32,30 @@ function Ingredients() {
   const { recipeId } = useParams<{ recipeId: string }>();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [ingredients, setIngredients] = useState<Ingredient[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (recipeId) {
-      const foundRecipe = recipesData.find((r: Recipe) => r.id === recipeId);
-      if (foundRecipe) {
-        setRecipe(foundRecipe);
-        // Initialize ingredients with checked: false
-        const initialIngredients = foundRecipe.ingredients.map(ing => ({
-          name: ing.item,
-          quantity: ing.quantity,
-          unit: ing.unit,
-          checked: false
-        }));
-        setIngredients(initialIngredients);
-      }
+      // Add a small delay to prevent flash and make loading feel more natural
+      const timer = setTimeout(() => {
+        const foundRecipe = recipesData.find((r: Recipe) => r.id === recipeId);
+        if (foundRecipe) {
+          setRecipe(foundRecipe);
+          // Initialize ingredients with checked: false
+          const initialIngredients = foundRecipe.ingredients.map(ing => ({
+            name: ing.item,
+            quantity: ing.quantity,
+            unit: ing.unit,
+            checked: false
+          }));
+          setIngredients(initialIngredients);
+        }
+        setIsLoading(false);
+      }, 300); // 300ms delay for smoother transition
+
+      return () => clearTimeout(timer);
+    } else {
+      setIsLoading(false);
     }
   }, [recipeId]);
 
@@ -59,6 +68,26 @@ function Ingredients() {
   const handleBackToMenu = () => {
     navigate(`${__XR_ENV_BASE__}/`);
   };
+
+  if (isLoading) {
+    return (
+      <div className="App">
+        <h1>Loading Ingredients...</h1>
+        <div className="card">
+          <p>Please wait while we load your recipe ingredients.</p>
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            height: '50px',
+            fontSize: '24px'
+          }}>
+            ⏳
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!recipe) {
     return (
@@ -117,7 +146,8 @@ function Ingredients() {
         <div>{/* Clicking a button will only open one scene */}</div>
         <p>
           <button
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault();
               // before recipe opens, resize the window
               initScene("recipeSteps", (prevConfig) => {
                 return {
@@ -128,7 +158,9 @@ function Ingredients() {
                   },
                 };
               });
-              window.open(`${__XR_ENV_BASE__}/recipe/${recipe.id}/step/1`, "recipeSteps");
+              setTimeout(() => {
+                window.open(`${__XR_ENV_BASE__}/recipe/${recipe.id}/step/1`, "recipeSteps");
+              }, 0);
             }}
           >
             Start Recipe

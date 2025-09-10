@@ -22,14 +22,23 @@ function Steps() {
   const { recipeId, stepNumber } = useParams<{ recipeId: string; stepNumber: string }>();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (recipeId) {
-      const foundRecipe = recipesData.find((r: Recipe) => r.id === recipeId);
-      if (foundRecipe) {
-        setRecipe(foundRecipe);
-        setCurrentStep(stepNumber ? parseInt(stepNumber) - 1 : 0);
-      }
+      // Add a small delay to prevent flash and make loading feel more natural
+      const timer = setTimeout(() => {
+        const foundRecipe = recipesData.find((r: Recipe) => r.id === recipeId);
+        if (foundRecipe) {
+          setRecipe(foundRecipe);
+          setCurrentStep(stepNumber ? parseInt(stepNumber) - 1 : 0);
+        }
+        setIsLoading(false);
+      }, 300); // 300ms delay for smoother transition
+
+      return () => clearTimeout(timer);
+    } else {
+      setIsLoading(false);
     }
   }, [recipeId, stepNumber]);
 
@@ -52,6 +61,26 @@ function Steps() {
   const handleBackToMenu = () => {
     navigate(`${__XR_ENV_BASE__}/`);
   };
+
+  if (isLoading) {
+    return (
+      <div className="App">
+        <h1>Loading Recipe...</h1>
+        <div className="card">
+          <p>Please wait while we load your recipe.</p>
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            height: '50px',
+            fontSize: '24px'
+          }}>
+            ⏳
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!recipe) {
     return (

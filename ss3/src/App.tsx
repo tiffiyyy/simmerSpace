@@ -30,7 +30,8 @@ function App() {
 
                   {/* button to "Chè Bắp 🌽" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       // before scene opens, resize the window
                       initScene("ingredients", (prevConfig) => {
                         return {
@@ -41,7 +42,10 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/che-bap/ingredients`, "ingredientsCB");
+                      // Use setTimeout to ensure the new window opens without affecting current window
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/che-bap/ingredients`, "ingredientsCB");
+                      }, 0);
                     }}
                   >
                     Chè Bắp 🌽
@@ -49,7 +53,8 @@ function App() {
 
                   {/* button to "Phở Bò 🍜" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -59,7 +64,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/pho-bo/ingredients`, "ingredientsPho");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/pho-bo/ingredients`, "ingredientsPho");
+                      }, 0);
                     }}
                   >
                     Phở Bò 🍜
@@ -67,7 +74,8 @@ function App() {
 
                   {/* button to "Chả Giò 🥟" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -77,7 +85,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/cha-gio/ingredients`, "ingredientsChaGio");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/cha-gio/ingredients`, "ingredientsChaGio");
+                      }, 0);
                     }}
                   >
                     Chả Giò 🥟
@@ -85,7 +95,8 @@ function App() {
 
                   {/* button to "Gỏi Cuốn 🌯" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -95,7 +106,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/goi-cuon/ingredients`, "ingredientsGoiCuon");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/goi-cuon/ingredients`, "ingredientsGoiCuon");
+                      }, 0);
                     }}
                   >
                     Gỏi Cuốn 🌯
@@ -103,7 +116,8 @@ function App() {
 
                   {/* button to "Bánh Bèo 🥧" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -113,7 +127,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/banh-beo/ingredients`, "ingredientsBanhBeo");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/banh-beo/ingredients`, "ingredientsBanhBeo");
+                      }, 0);
                     }}
                   >
                     Bánh Bèo 🥧
@@ -121,7 +137,8 @@ function App() {
 
                   {/* button to "Bánh Xèo 🥞" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -131,7 +148,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/banh-xeo/ingredients`, "ingredientsBanhXeo");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/banh-xeo/ingredients`, "ingredientsBanhXeo");
+                      }, 0);
                     }}
                   >
                     Bánh Xèo 🥞
@@ -139,7 +158,8 @@ function App() {
 
                   {/* button to "Bánh Chưng 🥮" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -149,7 +169,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/banh-chung/ingredients`, "ingredientsBanhChung");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/banh-chung/ingredients`, "ingredientsBanhChung");
+                      }, 0);
                     }}
                   >
                     Bánh Chưng 🥮
@@ -157,7 +179,8 @@ function App() {
 
                   {/* button to "Bánh Xanh 🍃" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
@@ -168,7 +191,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/banh-xanh/ingredients`, "ingredientsBanhXanh");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/banh-xanh/ingredients`, "ingredientsBanhXanh");
+                      }, 0);
                     }}
                   >
                     Bánh Xanh 🍃
@@ -176,7 +201,8 @@ function App() {
 
                   {/* button to "Bánh Cam 🟡" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -186,7 +212,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/banh-cam/ingredients`, "ingredientsBanhCam");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/banh-cam/ingredients`, "ingredientsBanhCam");
+                      }, 0);
                     }}
                   >
                     Bánh Cam 🟡
@@ -194,7 +222,8 @@ function App() {
 
                   {/* button to "Mì Hoành Thánh 🍜" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -204,7 +233,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/mi-hoanh-thanh/ingredients`, "ingredientsMiHoanhThanh");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/mi-hoanh-thanh/ingredients`, "ingredientsMiHoanhThanh");
+                      }, 0);
                     }}
                   >
                     Mì Hoành Thánh 🍜
@@ -212,7 +243,8 @@ function App() {
 
                   {/* button to "Thịt Nướng 🥩" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -222,7 +254,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/thit-nuong/ingredients`, "ingredientsThitNuong");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/thit-nuong/ingredients`, "ingredientsThitNuong");
+                      }, 0);
                     }}
                   >
                     Thịt Nướng 🥩
@@ -230,7 +264,8 @@ function App() {
 
                   {/* button to "Thịt Kho Trứng 🥚" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -240,7 +275,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/thit-kho-trung/ingredients`, "ingredientsThitKhoTrung");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/thit-kho-trung/ingredients`, "ingredientsThitKhoTrung");
+                      }, 0);
                     }}
                   >
                     Thịt Kho Trứng 🥚
@@ -248,7 +285,8 @@ function App() {
 
                   {/* button to "Hủ Tiếu 🍲" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -258,7 +296,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/hu-tieu/ingredients`, "ingredientsHuTieu");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/hu-tieu/ingredients`, "ingredientsHuTieu");
+                      }, 0);
                     }}
                   >
                     Hủ Tiếu 🍲
@@ -266,7 +306,8 @@ function App() {
 
                   {/* button to "Bánh Mì 🥖" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -276,7 +317,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/banh-mi/ingredients`, "ingredientsBanhMi");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/banh-mi/ingredients`, "ingredientsBanhMi");
+                      }, 0);
                     }}
                   >
                     Bánh Mì 🥖
@@ -284,7 +327,8 @@ function App() {
                   
                   {/* button to "Bún Bò Huế 🌶️" page */}
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -294,7 +338,9 @@ function App() {
                           },
                         };
                       });
-                      window.open(`${__XR_ENV_BASE__}/recipe/bun-bo-hue/ingredients`, "ingredientsBunBoHue");
+                      setTimeout(() => {
+                        window.open(`${__XR_ENV_BASE__}/recipe/bun-bo-hue/ingredients`, "ingredientsBunBoHue");
+                      }, 0);
                     }}
                   >
                     Bún Bò Huế 🌶️

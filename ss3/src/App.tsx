@@ -1,8 +1,10 @@
 import "./App.css";
+// import routing components  
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+// import webspatial SDK 
 import { initScene } from "@webspatial/react-sdk";
 
-// import recipe steps for che bap below
+// import recipe steps and ingredients below
 import Steps from "./steps";
 import Ingredients from "./ingredients";
 
@@ -12,21 +14,24 @@ function App() {
     <>
       <Router>
         <Routes>
+          {/* route to ingredients page */}
           <Route path="/recipe/:recipeId/ingredients" element={<Ingredients />} />
+          {/* route to recipe page */}
           <Route path="/recipe/:recipeId/step/:stepNumber" element={<Steps />} />
+          {/* route to main menu */}
           <Route
             path="/"
             element={
               <>
-                <div>{/*new code for main menu here*/}</div>
+                {/*new code for main menu here*/}
                 <div className="card" style={{ marginTop: "0px" }}>
                   <h2>Simmer Space</h2>
-                  <div>
-                    {/* Clicking a link will open a new scene each time */}
-                  </div>
+                  {/* Clicking a link will open a new scene each time */}
+
+                  {/* button to "Chè Bắp 🌽" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
+                      // before scene opens, resize the window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -41,9 +46,10 @@ function App() {
                   >
                     Chè Bắp 🌽
                   </button>
+
+                  {/* button to "Phở Bò 🍜" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -58,9 +64,10 @@ function App() {
                   >
                     Phở Bò 🍜
                   </button>
+
+                  {/* button to "Chả Giò 🥟" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -75,9 +82,10 @@ function App() {
                   >
                     Chả Giò 🥟
                   </button>
+
+                  {/* button to "Gỏi Cuốn 🌯" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -92,9 +100,10 @@ function App() {
                   >
                     Gỏi Cuốn 🌯
                   </button>
+
+                  {/* button to "Bánh Bèo 🥧" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -109,9 +118,10 @@ function App() {
                   >
                     Bánh Bèo 🥧
                   </button>
+
+                  {/* button to "Bánh Xèo 🥞" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -126,9 +136,10 @@ function App() {
                   >
                     Bánh Xèo 🥞
                   </button>
+
+                  {/* button to "Bánh Chưng 🥮" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -143,6 +154,8 @@ function App() {
                   >
                     Bánh Chưng 🥮
                   </button>
+
+                  {/* button to "Bánh Xanh 🍃" page */}
                   <button
                     onClick={() => {
                       // before scene opens, resize the secondScene window
@@ -160,9 +173,10 @@ function App() {
                   >
                     Bánh Xanh 🍃
                   </button>
+
+                  {/* button to "Bánh Cam 🟡" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -177,9 +191,10 @@ function App() {
                   >
                     Bánh Cam 🟡
                   </button>
+
+                  {/* button to "Mì Hoành Thánh 🍜" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -194,9 +209,10 @@ function App() {
                   >
                     Mì Hoành Thánh 🍜
                   </button>
+
+                  {/* button to "Thịt Nướng 🥩" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -211,9 +227,10 @@ function App() {
                   >
                     Thịt Nướng 🥩
                   </button>
+
+                  {/* button to "Thịt Kho Trứng 🥚" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -228,9 +245,10 @@ function App() {
                   >
                     Thịt Kho Trứng 🥚
                   </button>
+
+                  {/* button to "Hủ Tiếu 🍲" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -245,9 +263,10 @@ function App() {
                   >
                     Hủ Tiếu 🍲
                   </button>
+
+                  {/* button to "Bánh Mì 🥖" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -262,9 +281,10 @@ function App() {
                   >
                     Bánh Mì 🥖
                   </button>
+                  
+                  {/* button to "Bún Bò Huế 🌶️" page */}
                   <button
                     onClick={() => {
-                      // before scene opens, resize the secondScene window
                       initScene("ingredients", (prevConfig) => {
                         return {
                           ...prevConfig,
@@ -279,19 +299,6 @@ function App() {
                   >
                     Bún Bò Huế 🌶️
                   </button>
-                  {/* <button
-                    onClick={() => {
-                      // Navigate to the first step of Chè Bắp recipe
-                      window.location.href = "/recipe/che-bap/step/1";
-                    }}
-                  >
-                    Chè Bắp Recipe Steps 🌽
-                  </button> */}
-                  {/* <p>
-                    <Link to="/icb" target="_blank">
-                      Chè Bắp Recipe 🌽
-                    </Link>
-                  </p> */}
                 </div>
               </>
             }

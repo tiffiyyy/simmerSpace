@@ -37,7 +37,7 @@ function Steps() {
     if (recipe && currentStep < recipe.steps.length - 1) {
       const nextStep = currentStep + 1;
       setCurrentStep(nextStep);
-      navigate(`/recipe/${recipeId}/step/${nextStep + 1}`);
+      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${nextStep + 1}`);
     }
   };
 
@@ -45,12 +45,12 @@ function Steps() {
     if (currentStep > 0) {
       const prevStep = currentStep - 1;
       setCurrentStep(prevStep);
-      navigate(`/recipe/${recipeId}/step/${prevStep + 1}`);
+      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${prevStep + 1}`);
     }
   };
 
   const handleBackToMenu = () => {
-    navigate("/");
+    navigate(`${__XR_ENV_BASE__}/`);
   };
 
   if (!recipe) {

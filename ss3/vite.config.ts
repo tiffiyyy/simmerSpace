@@ -8,12 +8,16 @@ export default defineConfig({
   plugins: [
     react(),
     webSpatial(),
-        createHtmlPlugin({
-          inject: {
-            data: {
-              XR_ENV: process.env.XR_ENV,
-            },
-          },
-        }),  
+    createHtmlPlugin({
+      inject: {
+        data: {
+          XR_ENV: process.env.XR_ENV,
+          XR_ENV_BASE: process.env.XR_ENV === 'visionos' ? '/spatial' : '',
+        },
+      },
+    }),  
   ],
+  define: {
+    __XR_ENV_BASE__: JSON.stringify(process.env.XR_ENV === 'visionos' ? '/spatial' : ''),
+  },
 })

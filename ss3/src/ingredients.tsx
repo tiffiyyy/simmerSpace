@@ -57,7 +57,7 @@ function Ingredients() {
   };
 
   const handleBackToMenu = () => {
-    navigate("/");
+    navigate(`${__XR_ENV_BASE__}/`);
   };
 
   if (!recipe) {
@@ -128,7 +128,7 @@ function Ingredients() {
                   },
                 };
               });
-              window.open(`/recipe/${recipe.id}/step/1`, "recipeSteps");
+              window.open(`${__XR_ENV_BASE__}/recipe/${recipe.id}/step/1`, "recipeSteps");
             }}
           >
             Start Recipe

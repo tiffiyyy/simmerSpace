@@ -15,9 +15,9 @@ function App() {
       <Router>
         <Routes>
           {/* route to ingredients page */}
-          <Route path="/recipe/:recipeId/ingredients" element={<Ingredients />} />
+          <Route path={`${__XR_ENV_BASE__}/recipe/:recipeId/ingredients`} element={<Ingredients />} />
           {/* route to recipe page */}
-          <Route path="/recipe/:recipeId/step/:stepNumber" element={<Steps />} />
+          <Route path={`${__XR_ENV_BASE__}/recipe/:recipeId/step/:stepNumber`} element={<Steps />} />
           {/* route to main menu */}
           <Route
             path="/"
@@ -41,7 +41,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/che-bap/ingredients", "ingredientsCB");
+                      window.open(`${__XR_ENV_BASE__}/recipe/che-bap/ingredients`, "ingredientsCB");
                     }}
                   >
                     Chè Bắp 🌽
@@ -59,7 +59,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/pho-bo/ingredients", "ingredientsPho");
+                      window.open(`${__XR_ENV_BASE__}/recipe/pho-bo/ingredients`, "ingredientsPho");
                     }}
                   >
                     Phở Bò 🍜
@@ -77,7 +77,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/cha-gio/ingredients", "ingredientsChaGio");
+                      window.open(`${__XR_ENV_BASE__}/recipe/cha-gio/ingredients`, "ingredientsChaGio");
                     }}
                   >
                     Chả Giò 🥟
@@ -95,7 +95,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/goi-cuon/ingredients", "ingredientsGoiCuon");
+                      window.open(`${__XR_ENV_BASE__}/recipe/goi-cuon/ingredients`, "ingredientsGoiCuon");
                     }}
                   >
                     Gỏi Cuốn 🌯
@@ -113,7 +113,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/banh-beo/ingredients", "ingredientsBanhBeo");
+                      window.open(`${__XR_ENV_BASE__}/recipe/banh-beo/ingredients`, "ingredientsBanhBeo");
                     }}
                   >
                     Bánh Bèo 🥧
@@ -131,7 +131,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/banh-xeo/ingredients", "ingredientsBanhXeo");
+                      window.open(`${__XR_ENV_BASE__}/recipe/banh-xeo/ingredients`, "ingredientsBanhXeo");
                     }}
                   >
                     Bánh Xèo 🥞
@@ -149,7 +149,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/banh-chung/ingredients", "ingredientsBanhChung");
+                      window.open(`${__XR_ENV_BASE__}/recipe/banh-chung/ingredients`, "ingredientsBanhChung");
                     }}
                   >
                     Bánh Chưng 🥮
@@ -168,7 +168,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/banh-xanh/ingredients", "ingredientsBanhXanh");
+                      window.open(`${__XR_ENV_BASE__}/recipe/banh-xanh/ingredients`, "ingredientsBanhXanh");
                     }}
                   >
                     Bánh Xanh 🍃
@@ -186,7 +186,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/banh-cam/ingredients", "ingredientsBanhCam");
+                      window.open(`${__XR_ENV_BASE__}/recipe/banh-cam/ingredients`, "ingredientsBanhCam");
                     }}
                   >
                     Bánh Cam 🟡
@@ -204,7 +204,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/mi-hoanh-thanh/ingredients", "ingredientsMiHoanhThanh");
+                      window.open(`${__XR_ENV_BASE__}/recipe/mi-hoanh-thanh/ingredients`, "ingredientsMiHoanhThanh");
                     }}
                   >
                     Mì Hoành Thánh 🍜
@@ -222,7 +222,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/thit-nuong/ingredients", "ingredientsThitNuong");
+                      window.open(`${__XR_ENV_BASE__}/recipe/thit-nuong/ingredients`, "ingredientsThitNuong");
                     }}
                   >
                     Thịt Nướng 🥩
@@ -240,7 +240,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/thit-kho-trung/ingredients", "ingredientsThitKhoTrung");
+                      window.open(`${__XR_ENV_BASE__}/recipe/thit-kho-trung/ingredients`, "ingredientsThitKhoTrung");
                     }}
                   >
                     Thịt Kho Trứng 🥚
@@ -258,7 +258,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/hu-tieu/ingredients", "ingredientsHuTieu");
+                      window.open(`${__XR_ENV_BASE__}/recipe/hu-tieu/ingredients`, "ingredientsHuTieu");
                     }}
                   >
                     Hủ Tiếu 🍲
@@ -276,7 +276,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/banh-mi/ingredients", "ingredientsBanhMi");
+                      window.open(`${__XR_ENV_BASE__}/recipe/banh-mi/ingredients`, "ingredientsBanhMi");
                     }}
                   >
                     Bánh Mì 🥖
@@ -294,7 +294,7 @@ function App() {
                           },
                         };
                       });
-                      window.open("/recipe/bun-bo-hue/ingredients", "ingredientsBunBoHue");
+                      window.open(`${__XR_ENV_BASE__}/recipe/bun-bo-hue/ingredients`, "ingredientsBunBoHue");
                     }}
                   >
                     Bún Bò Huế 🌶️

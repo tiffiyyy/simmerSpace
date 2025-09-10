@@ -12,18 +12,18 @@ import Ingredients from "./ingredients";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename={__XR_ENV_BASE__}>
         <Routes>
           {/* route to ingredients page */}
-          <Route path={`${__XR_ENV_BASE__}/recipe/:recipeId/ingredients`} element={<Ingredients />} />
+          <Route path={`/recipe/:recipeId/ingredients`} element={<Ingredients />} />
           {/* route to recipe page */}
-          <Route path={`${__XR_ENV_BASE__}/recipe/:recipeId/step/:stepNumber`} element={<Steps />} />
+          <Route path={`/recipe/:recipeId/step/:stepNumber`} element={<Steps />} />
           {/* route to main menu */}
           <Route
             path="/"
             element={
               <>
-                {/*new code for main menu here*/}
+                {/* new code for main menu here */}
                 <div className="card" style={{ marginTop: "0px" }}>
                   <h2>Simmer Space</h2>
                   {/* Clicking a link will open a new scene each time */}

@@ -45,13 +45,19 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s, color 0.25s;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s,
+    transform 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
 }
+
 button:hover {
   border-color: #646cff;
   background-color: #646cff;
   color: white;
+  transform: scale(1.15) translateY(-5px);
 }
+
 button:focus,
 button:focus-visible {
   outline: none;

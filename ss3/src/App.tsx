@@ -44,8 +44,6 @@ function App() {
                 {/* new code for main menu here */}
                 <div className="card" style={{ marginTop: "0px" }}>
                   <h2>Simmer Space</h2>
-                  {/* Clicking a link will open a new scene each time */}
-
                   {/* Render all recipe buttons dynamically */}
                   {recipesData.map((recipe) => {
                     return (

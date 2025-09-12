@@ -35,9 +35,11 @@ function Steps() {
 
   useEffect(() => {
     if (recipeId) {
-      // Add a small delay to prevent flash and make loading feel more natural
+      // add a small delay to prevent flash and make loading feel more natural
       const timer = setTimeout(() => {
+        // searches through recipe json file for data associated with selected recipeId 
         const foundRecipe = recipesData.find((r: Recipe) => r.id === recipeId);
+        // setes recipe and currentStep with associated data 
         if (foundRecipe) {
           setRecipe(foundRecipe);
           setCurrentStep(stepNumber ? parseInt(stepNumber) - 1 : 0);

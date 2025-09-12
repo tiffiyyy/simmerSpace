@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import recipesData from "./recipes.json";
 
+// creating a custom type: Recipe (like a struct) 
 interface Recipe {
   id: string;
   name: string;
@@ -29,15 +30,20 @@ type Ingredient = {
 
 function Ingredients() {
   const navigate = useNavigate();
+  // returns URL parameters (recipeId, stepNumber) from router (in App.tsx) 
   const { recipeId } = useParams<{ recipeId: string }>();
+  // declares recipe as a null piece of state which will either be a Recipe or null (set using setRecipe())
   const [recipe, setRecipe] = useState<Recipe | null>(null);
+  // declares recipe as an empty Ingredient array 
   const [ingredients, setIngredients] = useState<Ingredient[]>([]);
+  // declares isLoading as true; can be updated using setIsLoading() 
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (recipeId) {
       // Add a small delay to prevent flash and make loading feel more natural
       const timer = setTimeout(() => {
+        // searches through recipe json file for data associated with selected recipeId 
         const foundRecipe = recipesData.find((r: Recipe) => r.id === recipeId);
         if (foundRecipe) {
           setRecipe(foundRecipe);
@@ -59,16 +65,20 @@ function Ingredients() {
     }
   }, [recipeId]);
 
+  // handles Ingredient checklist; tracks which ingredients have been checked 
   const toggleIngredient = (index: number) => {
     const newIngredients = [...ingredients]; // copy array
     newIngredients[index].checked = !newIngredients[index].checked; // flip the value
     setIngredients(newIngredients); // update state
   };
 
+  // navigates back to the menu scene 
   const handleBackToMenu = () => {
     navigate(`${__XR_ENV_BASE__}/`);
   };
 
+  // if isLoading == true, show "loading" cutscene 
+  // purpose: replace menu screen showing briefly while navigating between pages
   if (isLoading) {
     return (
       <div className="App">
@@ -89,6 +99,7 @@ function Ingredients() {
     );
   }
 
+  // if recipe == null, show "recipe not found" screen
   if (!recipe) {
     return (
       <div className="App">
@@ -101,6 +112,7 @@ function Ingredients() {
     );
   }
 
+  // formats time (>= 60 mins --> x hr/s: x mins)
   const formatTime = (minutes: number) => {
     if (minutes < 60) {
       return `${minutes} minutes`;
@@ -117,6 +129,7 @@ function Ingredients() {
 
   return (
     <div className="App">
+      {/* displays recipe ingredient checklist (type, quantity), estimated time, description */}
       <h1>{recipe.name} Ingredients</h1>
       <div style={{ marginBottom: '20px', padding: '10px', backgroundColor: '#f0f0f0', borderRadius: '5px' }}>
         <p><strong>⏱️ Estimated Time:</strong> {formatTime(recipe.estimatedTime)}</p>
@@ -143,7 +156,7 @@ function Ingredients() {
       </div>
       <div className="card" style={{ marginTop: "20px" }}>
         <h2>Ready to start cooking {recipe.name}?</h2>
-        <div>{/* Clicking a button will only open one scene */}</div>
+        {/* Clicking a button will only open one scene */}
         <p>
           <button
             onClick={(e) => {
@@ -158,6 +171,7 @@ function Ingredients() {
                   },
                 };
               });
+              {/* open step 1 when user clicks "Start Recipe" button */}
               setTimeout(() => {
                 window.open(`${__XR_ENV_BASE__}/recipe/${recipe.id}/step/1`, "recipeSteps");
               }, 0);
@@ -167,6 +181,7 @@ function Ingredients() {
           </button>
         </p>
         <p><strong>Note</strong>: If you would like to reload your current recipe screen, please press this button again.</p>
+        {/* back to menu button */}
         <div style={{ marginTop: "20px" }}>
           <button onClick={handleBackToMenu}>Back to Menu</button>
         </div>

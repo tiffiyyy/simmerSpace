@@ -9,8 +9,10 @@
     "skipLibCheck": true,
     "ignoreDeprecations": "6.0",
 
-    /* Bundler mode */
+    /* resolves jsx-runtime errors */
     "moduleResolution": "node16",
+    /* resolves tsBuildInfoFile error */
+    "incremental": true, 
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,

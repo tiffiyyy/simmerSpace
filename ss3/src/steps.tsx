@@ -5,7 +5,7 @@ import recipesData from "./recipes.json";
 import { initScene } from "@webspatial/react-sdk";
 
 
-// creating a custom type: Recipe (like a struct) 
+// creating a struct: Recipe 
 interface Recipe {
   id: string;           // id of food (to be used to locate selected recipe from recipes.json)
   name: string;         // name of food (to be displayed)

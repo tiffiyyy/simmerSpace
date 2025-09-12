@@ -1,6 +1,7 @@
 import React from 'react';
 import { initScene } from "@webspatial/react-sdk";
 
+// creating a struct: RecipeButtonProps (to store info for main menu buttons)
 interface RecipeButtonProps {
   recipeId: string;
   recipeName: string;
@@ -8,6 +9,7 @@ interface RecipeButtonProps {
   imageAlt?: string;
 }
 
+// creating a React component (FC = functional component), using info from RecipeButtonProps interface
 const RecipeButton: React.FC<RecipeButtonProps> = ({ 
   recipeId, 
   recipeName, 
@@ -15,6 +17,7 @@ const RecipeButton: React.FC<RecipeButtonProps> = ({
   imageAlt 
 }) => {
   const handleClick = (e: React.MouseEvent) => {
+    {/* prevents page from reloading */}
     e.preventDefault();
     
     // Initialize scene with proper sizing

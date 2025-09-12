@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import recipesData from "./recipes.json";
 
-// creating a custom type: Recipe (like a struct) 
+// creating a struct: Recipe 
 interface Recipe {
   id: string;
   name: string;

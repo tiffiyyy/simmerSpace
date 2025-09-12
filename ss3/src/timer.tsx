@@ -14,31 +14,38 @@ interface Recipe {
 }
 
 function Timer() {
+  // initialized recipeId, stepNumber, duration types as strings 
   const { recipeId, stepNumber, duration } = useParams<{ 
     recipeId: string; 
     stepNumber: string; 
     duration: string; 
   }>();
   
+  // declared + initialized the following constants to 0 
   const [timeLeft, setTimeLeft] = useState(0);
   const [initialTime, setInitialTime] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
-  const [isCompleted, setIsCompleted] = useState(false);
-  const [recipe, setRecipe] = useState<Recipe | null>(null);
-  const [stepText, setStepText] = useState("");
-  const [isEditing, setIsEditing] = useState(false);
   const [editHours, setEditHours] = useState(0);
   const [editMinutes, setEditMinutes] = useState(0);
   const [editSeconds, setEditSeconds] = useState(0);
-  
+  // declared + initialized the following constants as false 
+  const [isRunning, setIsRunning] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false);
+  const [isEditing, setIsEditing] = useState(false); 
+  // declared + initialized the following constants as null 
+  const [recipe, setRecipe] = useState<Recipe | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  // declared + initialized the following constant as an empty string  
+  const [stepText, setStepText] = useState("");
 
   useEffect(() => {
     if (recipeId && stepNumber && duration) {
+      // searches through recipe json file for data associated with selected recipeId 
       const foundRecipe = recipesData.find((r: Recipe) => r.id === recipeId);
       if (foundRecipe) {
         setRecipe(foundRecipe);
+        {/* convert stepNumber to an integer and decrement (base 1 --> base 0) and store in stepIndex */}
         const stepIndex = parseInt(stepNumber) - 1;
+        {/* store instruction at stepIndex in step */}
         const step = foundRecipe.steps[stepIndex];
         if (typeof step === 'string') {
           setStepText(step);
@@ -47,6 +54,7 @@ function Timer() {
         }
       }
       
+      // using information from info stored at recipeId, initialize the following constants  
       const totalSeconds = parseInt(duration) * 60;
       setTimeLeft(totalSeconds);
       setInitialTime(totalSeconds);

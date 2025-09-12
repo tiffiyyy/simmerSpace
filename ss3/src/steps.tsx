@@ -53,26 +53,31 @@ function Steps() {
     }
   }, [recipeId, stepNumber]);
 
+  // currentStep += 1 and navigates to the next step scene 
   const handleNextStep = () => {
     if (recipe && currentStep < recipe.steps.length - 1) {
       const nextStep = currentStep + 1;
       setCurrentStep(nextStep);
-      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${nextStep + 1}`);
+      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${nextStep}`);
     }
   };
 
+  // currentStep -= 1 and navigates to the previous step scene 
   const handlePreviousStep = () => {
     if (currentStep > 0) {
       const prevStep = currentStep - 1;
       setCurrentStep(prevStep);
-      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${prevStep + 1}`);
+      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${prevStep}`);
     }
   };
 
+  // navigates back to the menu scene 
   const handleBackToMenu = () => {
     navigate(`${__XR_ENV_BASE__}/`);
   };
 
+  // if isLoading == true, show "loading" cutscene 
+  // purpose: replace menu screen showing briefly while navigating between pages
   if (isLoading) {
     return (
       <div className="App">
@@ -93,6 +98,7 @@ function Steps() {
     );
   }
 
+  // if recipe == null, show "recipe not found" screen
   if (!recipe) {
     return (
       <div className="App">
@@ -105,11 +111,14 @@ function Steps() {
     );
   }
 
+  // const stores instruction at currentStep 
   const step = recipe.steps[currentStep];
+  // const stores first step of recipe  
   const isFirstStep = currentStep === 0;
+  // const stores last step of recipe  
   const isLastStep = currentStep === recipe.steps.length - 1;
 
-  // Handle both step formats: object with step/note/time or simple string
+  // handle both step formats: object with step/note/time or simple string
   const stepText = typeof step === 'string' ? step : step.step;
   const stepNote = typeof step === 'string' ? null : step.note;
   const stepTime = typeof step === 'string' ? 0 : step.time;
@@ -117,6 +126,7 @@ function Steps() {
 
   return (
     <div className="App">
+      {/* displays recipe name, current step + num, notes (if applicable) */}
       <h1>{recipe.name}</h1>
       <div className="card">
         <h2>Step {currentStep + 1} of {recipe.steps.length}</h2>
@@ -127,6 +137,7 @@ function Steps() {
           </p>
         )}
         
+        {/* if recipe needs timer, display option to open timer */}
         {needsTimer && (
           <div style={{ marginTop: '15px', padding: '10px', backgroundColor: '#e8f4fd', borderRadius: '5px', border: '1px solid #b3d9ff' }}>
             <p style={{ margin: '0 0 10px 0', fontWeight: 'bold', color: '#0066cc' }}>
@@ -159,6 +170,7 @@ function Steps() {
           </div>
         )}
         
+        {/* conditional buttons */}
         <div style={{ marginTop: '20px', display: 'flex', gap: '10px', justifyContent: 'center' }}>
           {!isFirstStep && (
             <button onClick={handlePreviousStep}>Previous Step</button>
@@ -170,6 +182,7 @@ function Steps() {
           )}
         </div>
         
+        {/* return to menu screen button */}
         <div style={{ marginTop: '20px' }}>
           <button onClick={handleBackToMenu}>Back to Menu</button>
         </div>

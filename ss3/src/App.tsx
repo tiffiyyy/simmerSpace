@@ -23,6 +23,7 @@ function App() {
   };
 
 
+
   return (
     <>
       <Router basename={__XR_ENV_BASE__}>
@@ -44,18 +45,24 @@ function App() {
                 {/* new code for main menu here */}
                 <div className="card" style={{ marginTop: "0px" }}>
                   <h2>Simmer Space</h2>
+                  {/* <YouTubePlayer videoId="dQw4w9WgXcQ" /> */}
+                  {/* <button onClick={() => openYouTube("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}>Open YouTube</button> */}
+                  {/* Clicking a link will open a new scene each time */}
+
                   {/* Render all recipe buttons dynamically */}
-                  {recipesData.map((recipe) => {
-                    return (
-                      <RecipeButton
-                        key={recipe.id}
-                        recipeId={recipe.id}
-                        recipeName={recipe.name}
-                        imageUrl={recipe.image ? getImageUrl(recipe.image) : undefined}
-                        imageAlt={recipe.name}
-                      />
-                    );
-                  })}
+                  <div className="recipe-grid">
+                    {recipesData.map((recipe) => {
+                      return (
+                        <RecipeButton
+                          key={recipe.id}
+                          recipeId={recipe.id}
+                          recipeName={recipe.name}
+                          imageUrl={recipe.image ? getImageUrl(recipe.image) : undefined}
+                          imageAlt={recipe.name}
+                        />
+                      );
+                    })}
+                  </div>
 
                 </div>
               </>

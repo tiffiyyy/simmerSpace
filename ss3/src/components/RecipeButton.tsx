@@ -41,23 +41,18 @@ const RecipeButton: React.FC<RecipeButtonProps> = ({
   };
 
   return (
-    <button onClick={handleClick}>
-      {recipeName}
+    <button className="recipe-button" onClick={handleClick}>
       {/* Display recipe image if available */}
       {imageUrl && (
-        <div style={{ marginBottom: "20px", textAlign: "center" }}>
+        <div className="recipe-image-container">
           <img 
             src={imageUrl} 
             alt={imageAlt || recipeName}
-            style={{ 
-              maxWidth: "300px", 
-              height: "auto", 
-              borderRadius: "8px",
-              boxShadow: "0 4px 8px rgba(0,0,0,0.1)"
-            }}
+            className="recipe-image"
           />
         </div>
       )}
+      <h3>{recipeName}</h3>
     </button>
   );
 };

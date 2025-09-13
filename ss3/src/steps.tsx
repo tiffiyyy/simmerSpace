@@ -58,7 +58,7 @@ function Steps() {
     if (recipe && currentStep < recipe.steps.length - 1) {
       const nextStep = currentStep + 1;
       setCurrentStep(nextStep);
-      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${nextStep}`);
+      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${nextStep + 1}`);
     }
   };
 
@@ -67,7 +67,7 @@ function Steps() {
     if (currentStep > 0) {
       const prevStep = currentStep - 1;
       setCurrentStep(prevStep);
-      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${prevStep}`);
+      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${prevStep+ 1}`);
     }
   };
 

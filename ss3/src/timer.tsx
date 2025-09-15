@@ -503,6 +503,25 @@ function Timer() {
             </p>
           </div>
         )}
+        
+        {/* Close Button */}
+        <div style={{ marginTop: '20px', textAlign: 'center' }}>
+          <button 
+            onClick={() => window.close()}
+            style={{ 
+              background: '#ff3b30', 
+              color: 'white', 
+              border: 'none', 
+              padding: '12px 24px', 
+              borderRadius: '12px',
+              cursor: 'pointer',
+              fontSize: '16px',
+              fontWeight: '600'
+            }}
+          >
+            ✕ Close Timer
+          </button>
+        </div>
       </div>
     </div>
   );

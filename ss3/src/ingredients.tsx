@@ -171,9 +171,10 @@ function Ingredients() {
                   },
                 };
               });
-              {/* open step 1 when user clicks "Start Recipe" button */}
+              {/* navigate to step 1 when user clicks "Start Recipe" button */}
               setTimeout(() => {
-                window.open(`${__XR_ENV_BASE__}/recipe/${recipe.id}/step/1`, "recipeSteps");
+                // window.open(`${__XR_ENV_BASE__}/recipe/${recipe.id}/step/1`, "recipeSteps");
+                window.location.href = `${__XR_ENV_BASE__}/recipe/${recipe.id}/step/1`;
               }, 0);
             }}
           >

@@ -34,13 +34,17 @@ const RecipeButton: React.FC<RecipeButtonProps> = ({
     });
 
     // Open new window with recipe ingredients
+    // setTimeout(() => {
+    //   window.open(
+    //     `${__XR_ENV_BASE__}/recipe/${recipeId}/ingredients`,
+    //     `ingredients${recipeId
+    //       .replace(/-/g, "")
+    //       .replace(/\b\w/g, (l) => l.toUpperCase())}`
+    //   );
+    // }, 0);
+    // Navigate to recipe ingredients on the same page
     setTimeout(() => {
-      window.open(
-        `${__XR_ENV_BASE__}/recipe/${recipeId}/ingredients`,
-        `ingredients${recipeId
-          .replace(/-/g, "")
-          .replace(/\b\w/g, (l) => l.toUpperCase())}`
-      );
+      window.location.href = `${__XR_ENV_BASE__}/recipe/${recipeId}/ingredients`;
     }, 0);
   };
 

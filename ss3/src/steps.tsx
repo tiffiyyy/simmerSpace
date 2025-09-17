@@ -58,7 +58,7 @@ function Steps() {
     if (recipe && currentStep < recipe.steps.length - 1) {
       const nextStep = currentStep + 1;
       setCurrentStep(nextStep);
-      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${nextStep + 1}`);
+      navigate(`/recipe/${recipeId}/step/${nextStep + 1}`);
     }
   };
 
@@ -67,13 +67,13 @@ function Steps() {
     if (currentStep > 0) {
       const prevStep = currentStep - 1;
       setCurrentStep(prevStep);
-      navigate(`${__XR_ENV_BASE__}/recipe/${recipeId}/step/${prevStep+ 1}`);
+      navigate(`/recipe/${recipeId}/step/${prevStep+ 1}`);
     }
   };
 
   // navigates back to the menu scene 
   const handleBackToMenu = () => {
-    navigate(`${__XR_ENV_BASE__}/`);
+    navigate(`/`);
   };
 
   // if isLoading == true, show "loading" cutscene 
@@ -150,11 +150,11 @@ function Steps() {
                     ...prevConfig,
                     defaultSize: {
                       width: 400,
-                      height: 300,
+                      height: 600,
                     },
                   };
                 });
-                window.open(`/timer/${recipeId}/${currentStep + 1}/${stepTime}`, "timer");
+                window.open(`${__XR_ENV_BASE__}/timer/${recipeId}/${currentStep + 1}/${stepTime}`, "timer");
               }}
               style={{ 
                 backgroundColor: '#0066cc', 

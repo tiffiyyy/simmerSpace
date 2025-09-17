@@ -74,7 +74,7 @@ function Ingredients() {
 
   // navigates back to the menu scene 
   const handleBackToMenu = () => {
-    navigate(`${__XR_ENV_BASE__}/`);
+    navigate(`/`);
   };
 
   // if isLoading == true, show "loading" cutscene 

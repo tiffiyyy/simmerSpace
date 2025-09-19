@@ -59,6 +59,11 @@
 .recipe-button:active {
   background-color: #646cff;
 }
+
+.start-button {
+  border-radius: 20px;
+}
+
 .start-button:hover {
   background-color: orange;
 }

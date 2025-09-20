@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import recipesData from "./recipes.json";
+import grannyImg from './assets/granny-stirring-pot.png';
 
 interface Recipe {
   id: string;
@@ -47,7 +48,7 @@ const StartPage: React.FC = () => {
       </div>
       <div className="center-image-section">
         <img 
-          src="/src/assets/granny-stirring-pot.png" 
+          src={grannyImg} 
           alt="Simmer Space Pot" 
           className="center-image"
         />

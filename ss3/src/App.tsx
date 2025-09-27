@@ -47,7 +47,10 @@ function App() {
               <>
                 {/* new code for main menu here */}
                 <div className="card" style={{ marginTop: "0px" }}>
-                  <h2>Choose Your Recipe</h2>
+                  <div className="recipe-banner">
+                    <h1 className="banner-title">Discover Recipes</h1>
+                    <p className="banner-subtitle">Explore Vietnamese Culinary Heritage</p>
+                  </div>
                   {/* <YouTubePlayer videoId="dQw4w9WgXcQ" /> */}
                   {/* <button onClick={() => openYouTube("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}>Open YouTube</button> */}
                   {/* Clicking a link will open a new scene each time */}
@@ -62,6 +65,9 @@ function App() {
                           recipeName={recipe.name}
                           imageUrl={recipe.image ? getImageUrl(recipe.image) : undefined}
                           imageAlt={recipe.name}
+                          description={recipe.description}
+                          estimatedTime={recipe.estimatedTime}
+                          englishName={recipe.englishName}
                         />
                       );
                     })}

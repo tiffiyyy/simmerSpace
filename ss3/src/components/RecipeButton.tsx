@@ -7,6 +7,10 @@ interface RecipeButtonProps {
   recipeName: string;
   imageUrl?: string;
   imageAlt?: string;
+  description?: string;
+  estimatedTime?: number;
+  difficulty?: number;
+  englishName?: string;
 }
 
 // creating a React component (FC = functional component), using info from RecipeButtonProps interface
@@ -15,6 +19,10 @@ const RecipeButton: React.FC<RecipeButtonProps> = ({
   recipeName,
   imageUrl,
   imageAlt,
+  description,
+  estimatedTime,
+  difficulty,
+  englishName,
 }) => {
   const handleClick = (e: React.MouseEvent) => {
     {
@@ -49,7 +57,7 @@ const RecipeButton: React.FC<RecipeButtonProps> = ({
   };
 
   return (
-    <button className="recipe-button">
+    <div className="recipe-card" onClick={handleClick}>
       {/* Display recipe image if available */}
       {imageUrl && (
         <div className="recipe-image-container">
@@ -60,11 +68,31 @@ const RecipeButton: React.FC<RecipeButtonProps> = ({
           />
         </div>
       )}
-      <h3> {recipeName}</h3>
-      <button className="start-button" onClick={handleClick}>
-        Start Cooking!
-      </button>
-    </button>
+      
+      <div className="recipe-content">
+        <h3 className="recipe-title">{recipeName}</h3>
+        {englishName && (
+          <p className="recipe-english-name">{englishName}</p>
+        )}
+        
+        <div className="recipe-meta">
+          <div className="recipe-time">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="#999" strokeWidth="2"/>
+              <polyline points="12,6 12,12 16,14" stroke="#999" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <span>
+              {estimatedTime ? (
+                estimatedTime >= 60 
+                  ? `${Math.round(estimatedTime / 60)} hr${Math.round(estimatedTime / 60) > 1 ? 's' : ''}`
+                  : `${estimatedTime} min`
+              ) : 'N/A'}
+            </span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
   );
 };
 

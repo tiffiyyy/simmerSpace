@@ -157,7 +157,7 @@ function Steps() {
                     },
                   };
                 });
-                window.open(`${__XR_ENV_BASE__}/timer/${recipeId}/${currentStep + 1}/${stepTime}`, "timer");
+                window.open(`${__XR_ENV_BASE__}/timer/${recipeId}/${currentStep + 1}/${stepTime}`, "_blank");
               }}
               style={{ 
                 backgroundColor: '#0066cc', 

@@ -170,14 +170,14 @@ function Timer() {
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
       color: 'white'
     }}>
-      <div style={{
+      {/* <div style={{
         maxWidth: '400px',
         margin: '0 auto',
         background: '#1c1c1e',
         borderRadius: '20px',
         padding: '20px',
         boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)'
-      }}>
+      }}> */}
 
         {/* Recipe Info */}
         <div style={{ 
@@ -523,7 +523,7 @@ function Timer() {
           </button>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
 

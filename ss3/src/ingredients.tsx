@@ -10,6 +10,7 @@ interface Recipe {
   name: string;
   estimatedTime: number;
   description: string;
+  image:string;
   ingredients: Array<{
     item: string;
     quantity: string;
@@ -26,6 +27,11 @@ type Ingredient = {
   quantity: string;
   unit: string;
   checked: boolean;
+};
+
+const getImageUrl = (imagePath: string) => {
+  // Convert relative path to import URL for Vite
+  return new URL(imagePath, import.meta.url).href;
 };
 
 function Ingredients() {
@@ -124,7 +130,7 @@ function Ingredients() {
         <div className="recipe-header">
           <div className="dish-image-container">
             <img 
-              src={`/src/assets/images/${recipe.id}.png`} 
+              src={recipe.image ? getImageUrl(recipe.image) : undefined} 
               alt={recipe.name}
               className="dish-image"
               onError={(e) => {
@@ -138,10 +144,10 @@ function Ingredients() {
             <h1 className="recipe-main-title">{recipe.name}</h1>
             <p className="recipe-subtitle">{recipe.description}</p>
             <div className="recipe-meta-info">
-              <div className="meta-item">
+              {/* <div className="meta-item">
                 <span className="meta-icon">👥</span>
                 <span>Servings: 4</span>
-              </div>
+              </div> */}
               <div className="meta-item">
                 <span className="meta-icon">⏱️</span>
                 <span>Cook: {recipe.estimatedTime} min</span>

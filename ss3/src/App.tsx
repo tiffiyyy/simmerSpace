@@ -46,7 +46,7 @@ function App() {
             element={
               <>
                 {/* new code for main menu here */}
-                <div className="card count-card" enable-xr style={{ marginTop: "0px" }}>
+                {/* <div className="card count-card" enable-xr style={{ marginTop: "0px" }}> */}
                   <div className="recipe-banner" enable-xr>
                     <h1 className="banner-title">Discover Recipes</h1>
                     <p className="banner-subtitle">Explore Vietnamese Culinary Heritage</p>
@@ -73,7 +73,7 @@ function App() {
                     })}
                   </div>
 
-                </div>
+                {/* </div> */}
               </>
             }
           />

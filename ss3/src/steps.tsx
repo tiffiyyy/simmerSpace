@@ -152,8 +152,8 @@ function Steps() {
                   return {
                     ...prevConfig,
                     defaultSize: {
-                      width: 400,
-                      height: 600,
+                      width: 200,
+                      height:300,
                     },
                   };
                 });

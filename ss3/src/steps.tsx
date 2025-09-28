@@ -17,7 +17,7 @@ interface Recipe {
   steps: Array <{       // array storing steps in recipe 
     step: string;       // written step 
     note: string;       // any additional information 
-    time: number;
+    time: number;       // cooking time 
     video?: string;     // optional YouTube video URL
   }> | string[];
 }
@@ -123,9 +123,9 @@ function Steps() {
   const stepText = typeof step === 'string' ? step : step.step;
   const stepNote = typeof step === 'string' ? null : step.note;
   const stepTime = typeof step === 'string' ? 0 : step.time;
-  //const stepVideo = typeof step === 'string' ? null : step.video;
+  const stepVideo = typeof step === 'string' ? null : step.video;
   const needsTimer = stepTime > 0;
-  //const hasVideo = stepVideo && stepVideo.length > 0;
+  const hasVideo = stepVideo && stepVideo.length > 0;
 
   return (
     <div className="App">
@@ -173,7 +173,7 @@ function Steps() {
           </div>
         )}
         
-        {/* if recipe step has video, display option to open YouTube video
+        {/* if recipe step has video, display option to open YouTube video */}
         {hasVideo && (
           <div style={{ marginTop: '15px', padding: '10px', backgroundColor: '#fff3cd', borderRadius: '5px', border: '1px solid #ffeaa7' }}>
             <p style={{ margin: '0 0 10px 0', fontWeight: 'bold', color: '#856404' }}>
@@ -188,7 +188,6 @@ function Steps() {
             </button>
           </div>
         )}
-         */}
         {/* conditional buttons */}
         <div style={{ marginTop: '20px', display: 'flex', gap: '10px', justifyContent: 'center' }}>
           {!isFirstStep && (

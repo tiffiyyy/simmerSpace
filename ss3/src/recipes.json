@@ -375,11 +375,16 @@
         "note": "",
         "time": 0
       },
-      { "step": "Drain and mince the shrimp finely", "note": "", "time": 0 },
+      { 
+        "step": "Drain and mince the shrimp finely", 
+        "note": "", 
+        "time": 0 
+      },
       {
         "step": "Lightly pan-fry the minced shrimp until aromatic",
         "note": "",
-        "time": 0
+        "time": 0, 
+        "video": "https://www.youtube.com/watch?v=eXOKEOToeks&t=75s"
       },
       {
         "step": "Mix rice flour, tapioca flour, salt, and water until smooth",
@@ -389,7 +394,8 @@
       {
         "step": "Oil small bowls, pour 1 tablespoon of batter in each, steam until set (about 7 mins per batch)",
         "note": "",
-        "time": 7
+        "time": 7, 
+        "video": "https://www.youtube.com/watch?v=eXOKEOToeks&t=212s"
       },
       {
         "step": "Make scallion oil by heating oil and briefly frying green onions",

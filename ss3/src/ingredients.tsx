@@ -112,53 +112,48 @@ function Ingredients() {
     );
   }
 
-  // formats time (>= 60 mins --> x hr/s: x mins)
-  const formatTime = (minutes: number) => {
-    if (minutes < 60) {
-      return `${minutes} minutes`;
-    } else {
-      const hours = Math.floor(minutes / 60);
-      const remainingMinutes = minutes % 60;
-      if (remainingMinutes === 0) {
-        return `${hours} hour${hours > 1 ? 's' : ''}`;
-      } else {
-        return `${hours} hour${hours > 1 ? 's' : ''} ${remainingMinutes} minutes`;
-      }
-    }
-  };
 
   return (
-    <div className="App">
-      {/* displays recipe ingredient checklist (type, quantity), estimated time, description */}
-      <h1>{recipe.name} Ingredients</h1>
-      <div style={{ marginBottom: '20px', padding: '10px', backgroundColor: '#f0f0f0', borderRadius: '5px' }}>
-        <p><strong>⏱️ Estimated Time:</strong> {formatTime(recipe.estimatedTime)}</p>
-        <p><strong>📝 Description:</strong> {recipe.description}</p>
-      </div>
-      <div>
-        <h2>Ingredient Checklist</h2>
-        <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
-          {ingredients.map((ingredient, index) => (
-            <li key={ingredient.name} style={{ marginBottom: "10px" }}>
-              <label style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <input
-                  type="checkbox"
-                  checked={ingredient.checked}
-                  onChange={() => toggleIngredient(index)}
-                />
-                <span>
-                  <strong>{ingredient.quantity} {ingredient.unit}</strong> - {ingredient.name}
-                </span>
-              </label>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="card" style={{ marginTop: "20px" }}>
-        <h2>Ready to start cooking {recipe.name}?</h2>
-        {/* Clicking a button will only open one scene */}
-        <p>
+    <div className="ingredients-page">
+      {/* Kitchen background */}
+      
+      
+      {/* Glassmorphism recipe card */}
+      <div className="recipe-card-overlay">
+        {/* Recipe header section */}
+        <div className="recipe-header">
+          <div className="dish-image-container">
+            <img 
+              src={`/src/assets/images/${recipe.id}.png`} 
+              alt={recipe.name}
+              className="dish-image"
+              onError={(e) => {
+                // Fallback to a default image if specific recipe image not found
+                e.currentTarget.src = '/src/assets/granny-stirring-pot.png';
+              }}
+            />
+            
+          </div>
+          <div className="recipe-title-section">
+            <h1 className="recipe-main-title">{recipe.name}</h1>
+            <p className="recipe-subtitle">{recipe.description}</p>
+            <div className="recipe-meta-info">
+              <div className="meta-item">
+                <span className="meta-icon">👥</span>
+                <span>Servings: 4</span>
+              </div>
+              <div className="meta-item">
+                <span className="meta-icon">⏱️</span>
+                <span>Cook: {recipe.estimatedTime} min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* START COOKING button */}
+        <div className="start-cooking-section">
           <button
+            className="start-cooking-btn"
             onClick={(e) => {
               e.preventDefault();
               // before recipe opens, resize the window
@@ -178,13 +173,44 @@ function Ingredients() {
               }, 0);
             }}
           >
-            Start Recipe
+            START COOKING
           </button>
-        </p>
-        <p><strong>Note</strong>: If you would like to reload your current recipe screen, please press this button again.</p>
-        {/* back to menu button */}
-        <div style={{ marginTop: "20px" }}>
-          <button onClick={handleBackToMenu}>Back to Menu</button>
+        </div>
+
+        {/* Ingredients section */}
+        <div className="ingredients-section">
+          <h2 className="section-title">Ingredients</h2>
+          <div className="ingredients-list">
+            {ingredients.map((ingredient, index) => (
+              <div key={ingredient.name} className="ingredient-item">
+                <div className="ingredient-checkbox">
+                  <input
+                    type="checkbox"
+                    id={`ingredient-${index}`}
+                    checked={ingredient.checked}
+                    onChange={() => toggleIngredient(index)}
+                  />
+                  <label htmlFor={`ingredient-${index}`} className="ingredient-label">
+                    <div className="ingredient-details">
+                      <span className="ingredient-text">
+                        {ingredient.quantity} {ingredient.unit} {ingredient.name}
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Navigation buttons */}
+        <div className="navigation-buttons-section">
+          <button className="back-to-recipes-btn" onClick={() => navigate('/recipes')}>
+            Back to Recipes
+          </button>
+          <button className="back-to-menu-btn" onClick={handleBackToMenu}>
+            Back to Menu
+          </button>
         </div>
       </div>
     </div>

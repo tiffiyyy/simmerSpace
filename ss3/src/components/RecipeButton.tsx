@@ -19,9 +19,7 @@ const RecipeButton: React.FC<RecipeButtonProps> = ({
   recipeName,
   imageUrl,
   imageAlt,
-  description,
   estimatedTime,
-  difficulty,
   englishName,
 }) => {
   const handleClick = (e: React.MouseEvent) => {

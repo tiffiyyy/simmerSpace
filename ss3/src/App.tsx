@@ -46,8 +46,8 @@ function App() {
             element={
               <>
                 {/* new code for main menu here */}
-                <div className="card" style={{ marginTop: "0px" }}>
-                  <div className="recipe-banner">
+                <div className="card count-card" enable-xr style={{ marginTop: "0px" }}>
+                  <div className="recipe-banner" enable-xr>
                     <h1 className="banner-title">Discover Recipes</h1>
                     <p className="banner-subtitle">Explore Vietnamese Culinary Heritage</p>
                   </div>
@@ -56,7 +56,7 @@ function App() {
                   {/* Clicking a link will open a new scene each time */}
 
                   {/* Render all recipe buttons dynamically */}
-                  <div className="recipe-grid">
+                  <div className="recipe-grid" enable-xr>
                     {recipesData.map((recipe) => {
                       return (
                         <RecipeButton

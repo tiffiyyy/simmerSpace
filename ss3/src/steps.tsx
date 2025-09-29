@@ -148,23 +148,21 @@ function Steps() {
         </div>
 
         {/* Video/Image Display (Top Center) */}
-        <button>
+        <button 
+                    className="video-link"
+                    onClick={() => stepVideo && window.open(stepVideo, '_blank', 'noopener,noreferrer')}
+                  >
         <div className="media-display">
           
             <div className="cooking-visual">
               {hasVideo ? (
                 <div className="video-container">
-                  <a 
-                    href={stepVideo} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="video-link"
-                  >
+                  
                     <div className="video-placeholder">
                       <div className="play-icon">▶</div>
                       <p>Watch Video Tutorial</p>
                     </div>
-                  </a>
+                  
                 </div>
               ) : (
                 <div className="cooking-placeholder">

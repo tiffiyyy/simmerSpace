@@ -17,7 +17,7 @@ interface Recipe {
   steps: Array <{       // array storing steps in recipe 
     step: string;       // written step 
     note: string;       // any additional information 
-    time: number;       // cooking time 
+    time: number;
     video?: string;     // optional YouTube video URL
   }> | string[];
 }
@@ -128,82 +128,155 @@ function Steps() {
   const hasVideo = stepVideo && stepVideo.length > 0;
 
   return (
-    <div className="App">
-      {/* displays recipe name, current step + num, notes (if applicable) */}
-      <h1>{recipe.name}</h1>
-      <div className="card">
-        <h2>Step {currentStep + 1} of {recipe.steps.length}</h2>
-        <p><strong>{stepText}</strong></p>
-        {stepNote && (
-          <p style={{ fontStyle: 'italic', color: '#666' }}>
-            <em>Note: {stepNote}</em>
-          </p>
-        )}
+    <div className="cooking-interface">
+     
+    <div className="kitchen-background"></div>
+
+      {/* Main Cooking Interface Overlay */}
+      <div className="cooking-overlay">
         
-        {/* if recipe needs timer, display option to open timer */}
+        {/* Step Instruction Panel (Left) */}
+        <div className="instruction-panel">
+          <div className="step-header">
+            <h1 className="step-title">STEP {currentStep + 1}: {stepText}</h1>
+            {stepNote && (
+              <p className="step-note">
+                <em>Note: {stepNote}</em>
+              </p>
+            )}
+            {hasVideo && (
+              <div className="video-button-container">
+                <button 
+                  className="video-button"
+                  onClick={() => {
+                    window.open(stepVideo, "_blank", "width=800,height=600,scrollbars=yes,resizable=yes");
+                  }}
+                >
+                  📹 Watch Video Tutorial
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Video/Image Display (Top Center) */}
+        <div className="media-display">
+          <div className="media-container">
+            <div className="cooking-visual">
+              {/* Placeholder for cooking video/image - you can replace this with actual media */}
+              <div className="cooking-placeholder">
+                <div className="knife-icon">🔪</div>
+                <div className="ingredient-icon">🥩</div>
+                <div className="steam-effect">💨</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Simmer Timer (Top Right) */}
         {needsTimer && (
-          <div style={{ marginTop: '15px', padding: '10px', backgroundColor: '#e8f4fd', borderRadius: '5px', border: '1px solid #b3d9ff' }}>
-            <p style={{ margin: '0 0 10px 0', fontWeight: 'bold', color: '#0066cc' }}>
-              ⏱️ This step requires {stepTime} minutes
-            </p>
+          <div className="simmer-timer">
+            <div className="timer-display">
+              <div className="timer-time">{stepTime}:00</div>
+              <div className="timer-label">SIMMER TIMER</div>
+            </div>
+            <div className="timer-controls">
+              <button className="timer-btn" onClick={() => {/* Skip back */}}>⏮</button>
+              <button 
+                className="timer-btn play-btn"
+                onClick={() => {
+                  initScene("timer", (prevConfig) => {
+                    return {
+                      ...prevConfig,
+                      defaultSize: {
+                        width: 400,
+                        height: 600,
+                      },
+                    };
+                  });
+                  window.open(`${__XR_ENV_BASE__}/timer/${recipeId}/${currentStep + 1}/${stepTime}`, "timer");
+                }}
+              >
+                ⏸
+              </button>
+              <button className="timer-btn" onClick={() => {/* Skip forward */}}>⏭</button>
+            </div>
+          </div>
+        )}
+
+        {/* Ingredients List (Right Side) */}
+        <div className="ingredients-panel">
+          <div className="ingredients-header">
+            <h3>Ingredients for this step</h3>
+          </div>
+          <div className="ingredients-list">
+            {/* Simple list of ingredients needed for this step */}
+            <div className="ingredient-item">
+              <span className="ingredient-text">holder</span>
+            </div>
+            <div className="ingredient-item">
+              <span className="ingredient-text">holder</span>
+            </div>
+            <div className="ingredient-item">
+              <span className="ingredient-text">holder</span>
+            </div>
+            <div className="ingredient-item">
+              <span className="ingredient-text">holder</span>
+            </div>
+            <div className="ingredient-item">
+              <span className="ingredient-text">holder</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Buttons (Bottom Center) */}
+        <div className="navigation-section">
+          <div className="nav-buttons">
             <button 
-              onClick={() => {
-                initScene("timer", (prevConfig) => {
-                  return {
-                    ...prevConfig,
-                    defaultSize: {
-                      width: 200,
-                      height:300,
-                    },
-                  };
-                });
-                window.open(`${__XR_ENV_BASE__}/timer/${recipeId}/${currentStep + 1}/${stepTime}`, "_blank");
-              }}
-              style={{ 
-                backgroundColor: '#0066cc', 
-                color: 'white', 
-                border: 'none', 
-                padding: '8px 16px', 
-                borderRadius: '4px',
-                cursor: 'pointer'
-              }}
+              className="nav-button back-button"
+              onClick={handleBackToMenu}
             >
-              Start Timer
+              ← Back to Menu
             </button>
+            {!isFirstStep && (
+              <button 
+                className={`nav-button ${isFirstStep ? 'disabled' : 'active'}`}
+                onClick={handlePreviousStep}
+              >
+                PREVIOUS STEP
+              </button>
+            )}
+            {!isLastStep ? (
+              <button 
+                className={`nav-button ${!isFirstStep ? 'secondary' : 'active'}`}
+                onClick={handleNextStep}
+              >
+                NEXT STEP
+              </button>
+            ) : (
+              <button 
+                className="nav-button active"
+                onClick={handleBackToMenu}
+              >
+                COMPLETE RECIPE
+              </button>
+            )}
           </div>
-        )}
-        
-        {/* if recipe step has video, display option to open YouTube video */}
-        {hasVideo && (
-          <div style={{ marginTop: '15px', padding: '10px', backgroundColor: '#fff3cd', borderRadius: '5px', border: '1px solid #ffeaa7' }}>
-            <p style={{ margin: '0 0 10px 0', fontWeight: 'bold', color: '#856404' }}>
-              📹 Watch video tutorial for this step
-            </p>
-            <button style={{ background :'red'}}
-              onClick={() => {
-                window.open(stepVideo, "_blank", "width=800,height=600,scrollbars=yes,resizable=yes");
-              }}
-            >
-              ▶️ Watch Video
-            </button>
+        </div>
+
+        {/* Progress Bar and Voice Control (Bottom) */}
+        <div className="progress-section">
+          <div className="progress-bar">
+            <div 
+              className="progress-fill" 
+              style={{ width: `${((currentStep + 1) / recipe.steps.length) * 100}%` }}
+            ></div>
           </div>
-        )}
-        {/* conditional buttons */}
-        <div style={{ marginTop: '20px', display: 'flex', gap: '10px', justifyContent: 'center' }}>
-          {!isFirstStep && (
-            <button onClick={handlePreviousStep}>Previous Step</button>
-          )}
-          {!isLastStep ? (
-            <button onClick={handleNextStep}>Next Step</button>
-          ) : (
-            <button onClick={handleBackToMenu}>Complete Recipe</button>
-          )}
+          <div className="voice-control">
+            <div className={`checkmark-icon ${isLastStep ? 'completed' : ''}`}>✓</div>
+          </div>
         </div>
-        
-        {/* return to menu screen button */}
-        <div style={{ marginTop: '20px' }}>
-          <button onClick={handleBackToMenu}>Back to Menu</button>
-        </div>
+
       </div>
     </div>
   );

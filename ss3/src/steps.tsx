@@ -144,34 +144,37 @@ function Steps() {
                 <em>Note: {stepNote}</em>
               </p>
             )}
-            {hasVideo && (
-              <div className="video-button-container">
-                <button 
-                  className="video-button"
-                  onClick={() => {
-                    window.open(stepVideo, "_blank", "width=800,height=600,scrollbars=yes,resizable=yes");
-                  }}
-                >
-                  📹 Watch Video Tutorial
-                </button>
-              </div>
-            )}
           </div>
         </div>
 
         {/* Video/Image Display (Top Center) */}
+        <button>
         <div className="media-display">
-          <div className="media-container">
+          
             <div className="cooking-visual">
-              {/* Placeholder for cooking video/image - you can replace this with actual media */}
-              <div className="cooking-placeholder">
-                <div className="knife-icon">🔪</div>
-                <div className="ingredient-icon">🥩</div>
-                <div className="steam-effect">💨</div>
-              </div>
+              {hasVideo ? (
+                <div className="video-container">
+                  <a 
+                    href={stepVideo} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="video-link"
+                  >
+                    <div className="video-placeholder">
+                      <div className="play-icon">▶</div>
+                      <p>Watch Video Tutorial</p>
+                    </div>
+                  </a>
+                </div>
+              ) : (
+                <div className="cooking-placeholder">
+                  <p>No video available</p>
+                </div>
+              )}
             </div>
-          </div>
+          
         </div>
+        </button>
 
         {/* Simmer Timer (Top Right) */}
         {needsTimer && (

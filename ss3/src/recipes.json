@@ -17,6 +17,7 @@
         "step": "Strip the corn until it's just the cob",
         "note": "",
         "time": 0,
+        "video":"https://youtu.be/d4LwAzImn84?si=7oM4-mKHVgMelK_D&t=39",
         "stepIngredients": ["Bắp (Corn)"]
 
       },
@@ -30,6 +31,7 @@
         "step": "Boil the cobs for 10-15 mins",
         "note": "This is to infuse the water with corn flavoring and scents",
         "time": 10,
+        "video":"https://youtu.be/d4LwAzImn84?si=sxSKeyA2iCpJ5zhF&t=87",
         "stepIngredients": ["Nước (Water)", "Bắp (Corn)"]
       },
       {
@@ -55,12 +57,6 @@
         "note": "",
         "time": 0,
         "stepIngredients": ["đừng (Sugar)"]
-      },
-      {
-        "step": "Now make the tapioca starch mixture",
-        "note": "",
-        "time": 0,
-        "stepIngredients": ["bột năng (Tapioca Starch)"]
       },
       {
         "step": "Combine the tapioca starch into a cup of water to loosen/dissolve the starch",

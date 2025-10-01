@@ -54,21 +54,9 @@ const StartPage: React.FC = () => {
         />
       </div>
       <div className="navigation-buttons">
-        <button className="nav-button">
-          <div className="nav-icon">👨‍🍳</div>
-          <span className="nav-text">My Kitchen</span>
-        </button>
         <button className="nav-button" onClick={handleDiscoverRecipes}>
           <div className="nav-icon">📖</div>
           <span className="nav-text">Discover Recipes</span>
-        </button>
-        <button className="nav-button">
-          <div className="nav-icon">📜</div>
-          <span className="nav-text">Heritage Stories</span>
-        </button>
-        <button className="nav-button">
-          <div className="nav-icon">⏰</div>
-          <span className="nav-text">Cook Along</span>
         </button>
       </div>
       <div className="featured-recipe-card">

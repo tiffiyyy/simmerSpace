@@ -182,7 +182,6 @@ function Steps() {
               <div className="timer-label">SIMMER TIMER</div>
             </div>
             <div className="timer-controls">
-              <button className="timer-btn" onClick={() => {/* Skip back */}}>⏮</button>
               <button 
                 className="timer-btn play-btn"
                 onClick={() => {
@@ -198,9 +197,8 @@ function Steps() {
                   window.open(`${__XR_ENV_BASE__}/timer/${recipeId}/${currentStep + 1}/${stepTime}`, "timer");
                 }}
               >
-                ⏸
+                ▶
               </button>
-              <button className="timer-btn" onClick={() => {/* Skip forward */}}>⏭</button>
             </div>
           </div>
         )}

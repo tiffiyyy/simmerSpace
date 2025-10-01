@@ -52,12 +52,18 @@ button {
   z-index: 1;
 }
 
-button:hover {
+button:hover:not(.video-link) {
   border-color: #646cff;
   background-color: #646cff;
   color: white;
   transform: scale(1.15) translateY(-5px);
   z-index: 10;
+}
+
+button.video-link:hover {
+  border-color: transparent;
+  background-color: transparent;
+  transform: none;
 }
 
 button:focus,

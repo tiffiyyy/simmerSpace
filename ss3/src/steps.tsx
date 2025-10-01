@@ -132,7 +132,7 @@ function Steps() {
   return (
     <div className="cooking-interface">
      
-    <div className="kitchen-background"></div>
+    {/* <div className="kitchen-background"></div> */}
 
       {/* Main Cooking Interface Overlay */}
       <div className="cooking-overlay">
@@ -191,8 +191,8 @@ function Steps() {
                     return {
                       ...prevConfig,
                       defaultSize: {
-                        width: 400,
-                        height: 600,
+                        width: 600,
+                        height: 700,
                       },
                     };
                   });

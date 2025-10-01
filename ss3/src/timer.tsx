@@ -184,8 +184,7 @@ function Timer() {
 
   return (
     <div className="ingredients-page">
-      {/* Kitchen Background */}
-      <div className="kitchen-background"></div>
+      
       
       {/* Hidden Audio Element for Alarm */}
       <audio ref={audioRef} src={alarmSound} preload="auto" />

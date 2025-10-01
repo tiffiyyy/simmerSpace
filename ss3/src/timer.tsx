@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import "./App.css";
 import recipesData from "./recipes.json";
+import alarmSound from "./assets/timer-terminer-342934.mp3";
 
 interface Recipe {
   id: string;
@@ -34,6 +35,7 @@ function Timer() {
   // declared + initialized the following constants as null 
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   // declared + initialized the following constant as an empty string  
   const [stepText, setStepText] = useState("");
 
@@ -88,6 +90,23 @@ function Timer() {
       }
     };
   }, [isRunning, timeLeft]);
+
+  // Effect to handle alarm sound when timer completes
+  useEffect(() => {
+    if (isCompleted) {
+      // Play the alarm sound on repeat
+      if (audioRef.current) {
+        audioRef.current.loop = true;
+        audioRef.current.play().catch(err => console.error("Error playing alarm:", err));
+      }
+    } else {
+      // Stop the alarm sound when timer is not completed
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    }
+  }, [isCompleted]);
 
   const startTimer = () => {
     setIsRunning(true);
@@ -164,42 +183,50 @@ function Timer() {
   }
 
   return (
-    <div className="App" style={{ 
-      minHeight: '100vh',
-      padding: '20px',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      color: 'white'
-    }}>
-      {/* <div style={{
-        maxWidth: '400px',
-        margin: '0 auto',
-        background: '#1c1c1e',
-        borderRadius: '20px',
-        padding: '20px',
-        boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)'
-      }}> */}
+    <div className="ingredients-page">
+      {/* Kitchen Background */}
+      <div className="kitchen-background"></div>
+      
+      {/* Hidden Audio Element for Alarm */}
+      <audio ref={audioRef} src={alarmSound} preload="auto" />
+      
+      {/* Main Timer Container */}
+      <div className="recipe-card-overlay">
 
         {/* Recipe Info */}
-        <div style={{ 
+        <div className="recipe-header" style={{ 
+          display: 'block',
           textAlign: 'center', 
-          marginBottom: '30px',
-          fontSize: '14px',
-          color: '#8e8e93'
+          marginBottom: 'var(--spacing-lg)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+          paddingBottom: 'var(--spacing-md)'
         }}>
-          <strong style={{ color: 'white' }}>{recipe.name}</strong><br />
-          Step {stepNumber}: {stepText}
+          <div className="recipe-main-title" style={{ 
+            fontSize: '2.5rem',
+            marginBottom: 'var(--spacing-md)',
+            lineHeight: '1.2',
+            display: 'block'
+          }}>
+            {recipe.name}
+          </div>
+          <div className="recipe-subtitle" style={{
+            fontSize: '1rem',
+            lineHeight: '1.4'
+          }}>
+            Step {stepNumber}: {stepText}
+          </div>
         </div>
         
         {/* Time Display or Edit Mode */}
         {isEditing ? (
-          <div style={{ marginBottom: '30px' }}>
+          <div className="panel-glass" style={{ marginBottom: 'var(--spacing-lg)' }}>
             {/* Scrollable Time Picker */}
             <div style={{ 
               display: 'flex', 
               justifyContent: 'center', 
               alignItems: 'center',
-              gap: '20px',
-              marginBottom: '30px'
+              gap: 'var(--spacing-lg)',
+              marginBottom: 'var(--spacing-lg)'
             }}>
               {/* Hours Column */}
               <div style={{ textAlign: 'center' }}>
@@ -207,13 +234,16 @@ function Timer() {
                   height: '200px', 
                   overflow: 'hidden',
                   position: 'relative',
-                  width: '60px'
+                  width: '60px',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  borderRadius: 'var(--radius-md)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}>
                   <div style={{
                     display: 'flex',
                     flexDirection: 'column',
                     transform: `translateY(${100 - editHours * 40}px)`,
-                    transition: 'transform 0.3s ease'
+                    transition: 'transform var(--transition-normal)'
                   }}>
                     {generateTimeOptions(23).map((hour) => (
                       <div
@@ -225,8 +255,9 @@ function Timer() {
                           justifyContent: 'center',
                           fontSize: hour === editHours ? '24px' : '18px',
                           fontWeight: hour === editHours ? '600' : '400',
-                          color: hour === editHours ? '#007aff' : '#8e8e93',
-                          cursor: 'pointer'
+                          color: hour === editHours ? 'var(--orange-accent)' : 'rgba(255, 255, 255, 0.7)',
+                          cursor: 'pointer',
+                          transition: 'all var(--transition-fast)'
                         }}
                         onClick={() => setEditHours(hour)}
                         onWheel={(e) => handleWheel(e, 'hours')}
@@ -236,13 +267,23 @@ function Timer() {
                     ))}
                   </div>
                 </div>
-                <div style={{ fontSize: '12px', color: '#8e8e93', marginTop: '10px' }}>
-                  HOURS
+                <div style={{ 
+                  fontSize: '12px', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
+                  marginTop: 'var(--spacing-xs)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '1px'
+                }}>
+                  Hours
                 </div>
               </div>
 
               {/* Separator */}
-              <div style={{ fontSize: '24px', color: '#8e8e93' }}>:</div>
+              <div style={{ 
+                fontSize: '24px', 
+                color: 'var(--orange-accent)',
+                fontWeight: '600'
+              }}>:</div>
 
               {/* Minutes Column */}
               <div style={{ textAlign: 'center' }}>
@@ -250,13 +291,16 @@ function Timer() {
                   height: '200px', 
                   overflow: 'hidden',
                   position: 'relative',
-                  width: '60px'
+                  width: '60px',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  borderRadius: 'var(--radius-md)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}>
                   <div style={{
                     display: 'flex',
                     flexDirection: 'column',
                     transform: `translateY(${100 - editMinutes * 40}px)`,
-                    transition: 'transform 0.3s ease'
+                    transition: 'transform var(--transition-normal)'
                   }}>
                     {generateTimeOptions(59).map((min) => (
                       <div
@@ -268,8 +312,9 @@ function Timer() {
                           justifyContent: 'center',
                           fontSize: min === editMinutes ? '24px' : '18px',
                           fontWeight: min === editMinutes ? '600' : '400',
-                          color: min === editMinutes ? '#007aff' : '#8e8e93',
-                          cursor: 'pointer'
+                          color: min === editMinutes ? 'var(--orange-accent)' : 'rgba(255, 255, 255, 0.7)',
+                          cursor: 'pointer',
+                          transition: 'all var(--transition-fast)'
                         }}
                         onClick={() => setEditMinutes(min)}
                         onWheel={(e) => handleWheel(e, 'minutes')}
@@ -279,13 +324,23 @@ function Timer() {
                     ))}
                   </div>
                 </div>
-                <div style={{ fontSize: '12px', color: '#8e8e93', marginTop: '10px' }}>
-                  MINUTES
+                <div style={{ 
+                  fontSize: '12px', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
+                  marginTop: 'var(--spacing-xs)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '1px'
+                }}>
+                  Minutes
                 </div>
               </div>
 
               {/* Separator */}
-              <div style={{ fontSize: '24px', color: '#8e8e93' }}>:</div>
+              <div style={{ 
+                fontSize: '24px', 
+                color: 'var(--orange-accent)',
+                fontWeight: '600'
+              }}>:</div>
 
               {/* Seconds Column */}
               <div style={{ textAlign: 'center' }}>
@@ -293,13 +348,16 @@ function Timer() {
                   height: '200px', 
                   overflow: 'hidden',
                   position: 'relative',
-                  width: '60px'
+                  width: '60px',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  borderRadius: 'var(--radius-md)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}>
                   <div style={{
                     display: 'flex',
                     flexDirection: 'column',
                     transform: `translateY(${100 - editSeconds * 40}px)`,
-                    transition: 'transform 0.3s ease'
+                    transition: 'transform var(--transition-normal)'
                   }}>
                     {generateTimeOptions(59).map((sec) => (
                       <div
@@ -311,8 +369,9 @@ function Timer() {
                           justifyContent: 'center',
                           fontSize: sec === editSeconds ? '24px' : '18px',
                           fontWeight: sec === editSeconds ? '600' : '400',
-                          color: sec === editSeconds ? '#007aff' : '#8e8e93',
-                          cursor: 'pointer'
+                          color: sec === editSeconds ? 'var(--orange-accent)' : 'rgba(255, 255, 255, 0.7)',
+                          cursor: 'pointer',
+                          transition: 'all var(--transition-fast)'
                         }}
                         onClick={() => setEditSeconds(sec)}
                         onWheel={(e) => handleWheel(e, 'seconds')}
@@ -322,25 +381,28 @@ function Timer() {
                     ))}
                   </div>
                 </div>
-                <div style={{ fontSize: '12px', color: '#8e8e93', marginTop: '10px' }}>
-                  SECONDS
+                <div style={{ 
+                  fontSize: '12px', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
+                  marginTop: 'var(--spacing-xs)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '1px'
+                }}>
+                  Seconds
                 </div>
               </div>
             </div>
 
             {/* Edit Mode Buttons */}
-            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', gap: 'var(--spacing-sm)', justifyContent: 'center' }}>
               <button 
                 onClick={() => setIsEditing(false)}
+                className="btn-base"
                 style={{ 
-                  background: '#2c2c2e', 
-                  color: 'white', 
-                  border: 'none', 
-                  padding: '12px 24px', 
-                  borderRadius: '12px',
-                  cursor: 'pointer',
-                  fontSize: '16px',
-                  fontWeight: '600',
+                  background: 'rgba(255, 255, 255, 0.2)', 
+                  color: 'var(--white)', 
+                  border: '1px solid rgba(255, 255, 255, 0.3)', 
+                  padding: 'var(--spacing-sm) var(--spacing-md)', 
                   flex: 1
                 }}
               >
@@ -348,41 +410,32 @@ function Timer() {
               </button>
               <button 
                 onClick={handleTimeEdit}
-                style={{ 
-                  background: '#007aff', 
-                  color: 'white', 
-                  border: 'none', 
-                  padding: '12px 24px', 
-                  borderRadius: '12px',
-                  cursor: 'pointer',
-                  fontSize: '16px',
-                  fontWeight: '600',
-                  flex: 1
-                }}
+                className="btn-primary"
+                style={{ flex: 1 }}
               >
-                Start
+                Start Timer
               </button>
             </div>
           </div>
         ) : (
-          <div style={{ marginBottom: '30px' }}>
+          <div style={{ marginBottom: 'var(--spacing-lg)' }}>
             {/* Timer Display */}
             <div style={{ 
               textAlign: 'center', 
-              marginBottom: '20px',
-              padding: '30px',
-              background: isCompleted ? 
-                '#34c759' : 
-                '#2c2c2e',
-              borderRadius: '20px'
+              marginBottom: 'var(--spacing-lg)',
+              padding: 'var(--spacing-lg)'
             }}>
-              <div style={{ 
-                fontSize: '48px', 
-                fontWeight: '700', 
-                color: 'white',
-                marginBottom: '10px',
-                cursor: 'pointer'
-              }} onClick={() => setIsEditing(true)}>
+              <div 
+                className="text-white"
+                style={{ 
+                  fontSize: '3rem', 
+                  fontWeight: '700', 
+                  marginBottom: 'var(--spacing-sm)',
+                  cursor: 'pointer',
+                  transition: 'all var(--transition-fast)'
+                }} 
+                onClick={() => setIsEditing(true)}
+              >
                 {formatTime(timeLeft)}
               </div>
               
@@ -392,14 +445,14 @@ function Timer() {
                 height: '120px', 
                 margin: '0 auto',
                 position: 'relative',
-                marginBottom: '15px'
+                marginBottom: 'var(--spacing-md)'
               }}>
                 <svg width="120" height="120" style={{ transform: 'rotate(-90deg)' }}>
                   <circle
                     cx="60"
                     cy="60"
                     r="50"
-                    stroke="#3a3a3c"
+                    stroke="rgba(255, 255, 255, 0.2)"
                     strokeWidth="8"
                     fill="none"
                   />
@@ -407,22 +460,24 @@ function Timer() {
                     cx="60"
                     cy="60"
                     r="50"
-                    stroke={isCompleted ? '#34c759' : isRunning ? '#ff9500' : '#007aff'}
+                    stroke={isCompleted ? '#34c759' : isRunning ? 'var(--orange-accent)' : 'var(--secondary-brown)'}
                     strokeWidth="8"
                     fill="none"
                     strokeDasharray={`${2 * Math.PI * 50}`}
                     strokeDashoffset={`${2 * Math.PI * 50 * (1 - getProgressPercentage() / 100)}`}
-                    style={{ transition: 'stroke-dashoffset 1s ease-in-out' }}
+                    style={{ 
+                      transition: 'stroke-dashoffset var(--transition-slow)',
+                      filter: 'drop-shadow(0 0 10px rgba(107, 142, 35, 0.5))'
+                    }}
                   />
                 </svg>
               </div>
               
               {isCompleted && (
-                <div style={{ 
-                  fontSize: '18px', 
+                <div className="text-white" style={{ 
+                  fontSize: '1.2rem', 
                   fontWeight: '600', 
-                  color: 'white',
-                  marginBottom: '10px'
+                  marginBottom: 'var(--spacing-sm)'
                 }}>
                   🎉 Time's Up!
                 </div>
@@ -430,22 +485,18 @@ function Timer() {
             </div>
             
             {/* Control Buttons */}
-            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', gap: 'var(--spacing-sm)', justifyContent: 'center' }}>
               {!isCompleted && (
                 <>
                   {!isRunning ? (
                     <button 
                       onClick={startTimer}
+                      className="btn-primary"
                       style={{ 
-                        background: '#34c759', 
-                        color: 'white', 
-                        border: 'none', 
-                        padding: '12px 24px', 
-                        borderRadius: '12px',
-                        cursor: 'pointer',
-                        fontSize: '16px',
-                        fontWeight: '600',
-                        flex: 1
+                        flex: 1,
+                        background: 'var(--secondary-brown)',
+                        border: 'none',
+                        outline: 'none'
                       }}
                     >
                       ▶️ Start
@@ -453,16 +504,11 @@ function Timer() {
                   ) : (
                     <button 
                       onClick={pauseTimer}
+                      className="btn-base"
                       style={{ 
-                        background: '#ff9500', 
-                        color: 'white', 
-                        border: 'none', 
-                        padding: '12px 24px', 
-                        borderRadius: '12px',
-                        cursor: 'pointer',
-                        fontSize: '16px',
-                        fontWeight: '600',
-                        flex: 1
+                        background: 'var(--orange-accent)', 
+                        color: 'var(--white)', 
+                        flex: 1 
                       }}
                     >
                       ⏸️ Pause
@@ -471,18 +517,28 @@ function Timer() {
                 </>
               )}
               
+              {isCompleted && (
+                <button 
+                  onClick={() => setIsCompleted(false)}
+                  className="btn-base"
+                  style={{ 
+                    background: 'var(--orange-accent)', 
+                    color: 'var(--white)', 
+                    flex: 1 
+                  }}
+                >
+                  🔕 Stop Alarm
+                </button>
+              )}
+              
               <button 
                 onClick={resetTimer}
+                className="btn-base"
                 style={{ 
-                  background: '#8e8e93', 
-                  color: 'white', 
-                  border: 'none', 
-                  padding: '12px 24px', 
-                  borderRadius: '12px',
-                  cursor: 'pointer',
-                  fontSize: '16px',
-                  fontWeight: '600',
-                  flex: 1
+                  background: 'rgba(255, 255, 255, 0.2)', 
+                  color: 'var(--white)', 
+                  border: '1px solid rgba(255, 255, 255, 0.3)', 
+                  flex: 1 
                 }}
               >
                 🔄 Reset
@@ -492,38 +548,38 @@ function Timer() {
         )}
         
         {isCompleted && !isEditing && (
-          <div style={{ 
-            padding: '20px', 
-            background: '#34c759', 
-            borderRadius: '16px',
-            textAlign: 'center'
+          <div className="panel-glass" style={{ 
+            textAlign: 'center',
+            background: 'rgba(52, 199, 89, 0.2)',
+            border: '1px solid rgba(52, 199, 89, 0.3)'
           }}>
-            <p style={{ margin: 0, color: 'white', fontWeight: '600', fontSize: '16px' }}>
+            <p className="text-white" style={{ 
+              margin: 0, 
+              fontWeight: '600', 
+              fontSize: '1rem' 
+            }}>
               ✅ Step completed! You can now proceed to the next step.
             </p>
           </div>
         )}
         
         {/* Close Button */}
-        <div style={{ marginTop: '20px', textAlign: 'center' }}>
+        <div style={{ marginTop: 'var(--spacing-lg)', textAlign: 'center' }}>
           <button 
             onClick={() => window.close()}
+            className="btn-base"
             style={{ 
-              background: '#ff3b30', 
-              color: 'white', 
-              border: 'none', 
-              padding: '12px 24px', 
-              borderRadius: '12px',
-              cursor: 'pointer',
-              fontSize: '16px',
-              fontWeight: '600'
+              background: 'rgba(255, 59, 48, 0.8)', 
+              color: 'var(--white)', 
+              border: '1px solid rgba(255, 59, 48, 0.3)',
+              padding: 'var(--spacing-sm) var(--spacing-lg)'
             }}
           >
             ✕ Close Timer
           </button>
         </div>
       </div>
-    // </div>
+    </div>
   );
 }
 

@@ -19,6 +19,7 @@ interface Recipe {
     note: string;       // any additional information 
     time: number;
     video?: string;     // optional YouTube video URL
+    stepIngredients?: string[]; // ingredients needed for this specific step
   }> | string[];
 }
 
@@ -124,6 +125,7 @@ function Steps() {
   const stepNote = typeof step === 'string' ? null : step.note;
   const stepTime = typeof step === 'string' ? 0 : step.time;
   const stepVideo = typeof step === 'string' ? null : step.video;
+  const stepIngredients = typeof step === 'string' ? [] : (step.stepIngredients || []);
   const needsTimer = stepTime > 0;
   const hasVideo = stepVideo && stepVideo.length > 0;
 
@@ -210,21 +212,17 @@ function Steps() {
           </div>
           <div className="ingredients-list">
             {/* Simple list of ingredients needed for this step */}
-            <div className="ingredient-item">
-              <span className="ingredient-text">holder</span>
-            </div>
-            <div className="ingredient-item">
-              <span className="ingredient-text">holder</span>
-            </div>
-            <div className="ingredient-item">
-              <span className="ingredient-text">holder</span>
-            </div>
-            <div className="ingredient-item">
-              <span className="ingredient-text">holder</span>
-            </div>
-            <div className="ingredient-item">
-              <span className="ingredient-text">holder</span>
-            </div>
+            {stepIngredients.length > 0 ? (
+              stepIngredients.map((ingredient, index) => (
+                <div key={index} className="ingredient-item">
+                  <span className="ingredient-text">{ingredient}</span>
+                </div>
+              ))
+            ) : (
+              <div className="ingredient-item">
+                <span className="ingredient-text">No specific ingredients for this step</span>
+              </div>
+            )}
           </div>
         </div>
 

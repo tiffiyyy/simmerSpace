@@ -16,57 +16,69 @@
       {
         "step": "Strip the corn until it's just the cob",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Bắp (Corn)"]
+
       },
       {
         "step": "Place four cups of water into a pot and place the cobs inside.",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Nước (Water)", "Bắp (Corn)"]
       },
       {
         "step": "Boil the cobs for 10-15 mins",
         "note": "This is to infuse the water with corn flavoring and scents",
-        "time": 10
+        "time": 10,
+        "stepIngredients": ["Nước (Water)", "Bắp (Corn)"]
       },
       {
         "step": "Remove the cobs and put in the corn bits",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Bắp (Corn)"]
       },
       {
         "step": "Boil the corn bits for 10-15 mins",
         "note": "This time may differ depending on the quality/freshness of the corn",
-        "time": 10
+        "time": 10,
+        "stepIngredients": ["Nước (Water)", "Bắp (Corn)"]
       },
       {
         "step": "Add the cup of sugar and stir",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["đừng (Sugar)"]
       },
       {
         "step": "Continue to add sugar to taste",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["đừng (Sugar)"]
       },
       {
         "step": "Now make the tapioca starch mixture",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["bột năng (Tapioca Starch)"]
       },
       {
         "step": "Combine the tapioca starch into a cup of water to loosen/dissolve the starch",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["bột năng (Tapioca Starch)", "Nước (Water)"]
       },
       {
         "step": "Pour the mixture into the pot and stir for 10-15 mins until the chè thickens",
         "note": "",
-        "time": 10
+        "time": 10,
+        "stepIngredients": ["bột năng (Tapioca Starch)"]
       },
       {
         "step": "Once the chè clears up, it'll be done",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       }
     ]
   },
@@ -121,52 +133,108 @@
       {
         "step": "Char the onions and ginger. Toast the spices until aromatic.",
         "note": "Charring the aromatics adds depth to the broth.",
-        "time": 0
+        "time": 0,
+        "stepIngredients": [
+          "Onion",
+          "Ginger",
+          "Star anise",
+          "Cinnamon sticks",
+          "Cardamom pods",
+          "Cloves",
+          "Coriander seeds"
+        ]
       },
       {
         "step": "Quick boil the bones and beef brisket for 5 minutes to remove impurities. Rinse everything clean.",
         "note": "Ensures a clear broth.",
-        "time": 5
+        "time": 5,
+        "stepIngredients": ["Meaty beef bones", "Marrow bones (leg, knuckle)", "Beef brisket", "Water"]
       },
       {
         "step": "In a large pot, add bones, brisket, charred onion, ginger, and toasted spices. Cover with water (~3.5L).",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": [
+          "Meaty beef bones",
+          "Marrow bones (leg, knuckle)",
+          "Beef brisket",
+          "Onion",
+          "Ginger",
+          "Star anise",
+          "Cinnamon sticks",
+          "Cardamom pods",
+          "Cloves",
+          "Coriander seeds",
+          "Water"
+        ]
       },
       {
         "step": "Simmer for 3 hours, skimming scum off the surface as needed.",
         "note": "",
-        "time": 180
+        "time": 180,
+        "stepIngredients": [
+          "Meaty beef bones",
+          "Marrow bones (leg, knuckle)",
+          "Beef brisket",
+          "Onion",
+          "Ginger",
+          "Star anise",
+          "Cinnamon sticks",
+          "Cardamom pods",
+          "Cloves",
+          "Coriander seeds",
+          "Water"
+        ]
       },
       {
         "step": "Remove brisket, set aside. Continue simmering bones 40 more minutes.",
         "note": "Slice brisket for serving.",
-        "time": 40
+        "time": 40,
+        "stepIngredients": ["Beef brisket", "Meaty beef bones", "Marrow bones (leg, knuckle)", "Water"]
+
       },
       {
         "step": "Strain the broth. Season with fish sauce, sugar, and salt.",
         "note": "Adjust seasoning to taste.",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Fish sauce", "White sugar", "Salt"]
+
       },
       {
         "step": "Cook rice noodles according to package instructions.",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Rice noodles", "Water"]
+
       },
       {
         "step": "To serve, add noodles to bowl, top with brisket slices and raw thinly-sliced beef tenderloin.",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Rice noodles", "Beef brisket", "Beef tenderloin"]
+
       },
       {
         "step": "Ladle boiling hot broth over the beef to cook it.",
         "note": "The heat of the broth cooks the beef.",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Beef tenderloin", "Beef brisket", "Meaty beef bones", "Marrow bones (leg, knuckle)"]
+
       },
       {
         "step": "Garnish with beansprouts, basil, cilantro, lime, chili, hoisin, and sriracha as desired.",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": [
+          "Beansprouts",
+          "Thai basil",
+          "Coriander/cilantro",
+          "Lime wedges",
+          "Red chili",
+          "Hoisin sauce",
+          "Sriracha"
+        ]
+
       }
     ]
   },
@@ -206,42 +274,64 @@
       {
         "step": "Soak bean threads and wood ear mushrooms in hot water until soft (about 30 min)",
         "note": "",
-        "time": 30
+        "time": 30,
+        "stepIngredients": ["Bean thread noodles", "Wood ear mushrooms", "Water"]
+
       },
       {
         "step": "Shred onion and jícama, squeeze excess moisture out",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Onion", "Jícama"]
+
       },
       {
         "step": "Chop noodles and mushrooms",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Bean thread noodles", "Wood ear mushrooms"]
+
       },
       {
         "step": "Mix bean thread, mushrooms, onion, salt, pepper, sugar; add pork and jícama",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": [
+          "Bean thread noodles",
+          "Wood ear mushrooms",
+          "Onion",
+          "Salt",
+          "Pepper",
+          "Sugar",
+          "Ground pork",
+          "Jícama"
+        ]
       },
       {
         "step": "Taste test mixture, adjust seasoning",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Salt", "Pepper", "Sugar", "Ground pork"]
       },
       {
         "step": "Mix water and flour to make sealing paste",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Water", "Flour"]
       },
       {
         "step": "Wrap egg rolls, sealing the edge with paste",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Egg roll wrappers (Menlo Brand or similar)", "Water", "Flour"]
+
       },
       {
         "step": "Fry at 325°F until golden brown and cooked inside (about 14 mins per batch)",
         "note": "",
-        "time": 14
+        "time": 14,
+        "stepIngredients": ["Vegetable oil", "Egg roll wrappers (Menlo Brand or similar)", "Ground pork"]
+
       }
     ]
   },
@@ -274,53 +364,71 @@
       {
         "step": "Poach pork belly with a pinch of salt until cooked through (about 30 min)",
         "note": "",
-        "time": 30
+        "time": 30,
+        "stepIngredients": ["Pork belly", "Salt", "Water"]
       },
-      { "step": "Slice the cooked pork belly thinly", "note": "", "time": 0 },
+      { "step": "Slice the cooked pork belly thinly", "note": "", "time": 0, "stepIngredients": ["Pork belly"] },
       {
         "step": "Boil shrimp until just cooked (about 2 - 4 min)",
         "note": "",
-        "time": 2
+        "time": 2,
+        "stepIngredients": ["Shrimp", "Water"]
       },
       {
         "step": "Peel and halve the cooked shrimp lengthwise",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Shrimp"]
       },
       {
         "step": "Cook rice vermicelli noodles per package instructions (about 10 min)",
         "note": "",
-        "time": 10
+        "time": 10,
+        "stepIngredients": ["Rice vermicelli noodles", "Water"]
       },
       {
         "step": "Rinse, dry, and prep all vegetables and herbs",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Green leaf lettuce", "Mint", "Cilantro or basil", "Chives"]
       },
       {
         "step": "Set up a rolling station with all prepared ingredients",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       },
       {
         "step": "Dip one rice paper in warm water for a few seconds to soften",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Rice paper wrappers", "Water"]
       },
       {
         "step": "Layer noodles, lettuce, herbs, pork, and shrimp on the center of the wrapper",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": [
+          "Rice vermicelli noodles",
+          "Green leaf lettuce",
+          "Mint",
+          "Cilantro or basil",
+          "Pork belly",
+          "Shrimp",
+          "Chives"
+        ]
       },
       {
         "step": "Roll the rice paper up tightly to enclose the filling",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       },
       {
         "step": "Repeat with remaining wrappers and ingredients",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       }
     ]
   },
@@ -363,54 +471,67 @@
       {
         "step": "Soak dried shrimp in warm water for 2 hours",
         "note": "",
-        "time": 120
+        "time": 120,
+        "stepIngredients": ["Dried shrimp", "Water"]
       },
       {
         "step": "Boil soaked mung beans in water until tender (about 30 minutes)",
         "note": "",
-        "time": 30
+        "time": 30,
+        "stepIngredients": ["Dried split mung beans", "Water"]
       },
       {
         "step": "Mash the cooked mung beans into a thick paste",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Dried split mung beans"]
       },
       { 
         "step": "Drain and mince the shrimp finely", 
         "note": "", 
-        "time": 0 
+        "time": 0,
+        "stepIngredients": ["Dried shrimp"]
       },
       {
         "step": "Lightly pan-fry the minced shrimp until aromatic",
         "note": "",
         "time": 0, 
-        "video": "https://www.youtube.com/watch?v=eXOKEOToeks&t=75s"
+        "video": "https://www.youtube.com/watch?v=eXOKEOToeks&t=75s",
+        "stepIngredients": ["Dried shrimp", "Vegetable oil"]
+
       },
       {
         "step": "Mix rice flour, tapioca flour, salt, and water until smooth",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Rice flour", "Tapioca flour", "Salt", "Water"]
       },
       {
         "step": "Oil small bowls, pour 1 tablespoon of batter in each, steam until set (about 7 mins per batch)",
         "note": "",
         "time": 7, 
-        "video": "https://www.youtube.com/watch?v=eXOKEOToeks&t=212s"
+        "video": "https://www.youtube.com/watch?v=eXOKEOToeks&t=212s",
+        "stepIngredients": ["Rice flour", "Tapioca flour", "Salt", "Water", "Vegetable oil"]
       },
       {
         "step": "Make scallion oil by heating oil and briefly frying green onions",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Vegetable oil", "Green onions"]
       },
       {
         "step": "Prepare dipping sauce by mixing fish sauce, water, lime juice, sugar, garlic, and chili",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Fish sauce", "Water", "Lime juice", "Sugar", "Garlic", "Bird's eye chili"]
+
       },
       {
         "step": "Top each rice cake with mung bean paste, shrimp, scallion oil, and crispy shallots",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Dried split mung beans", "Dried shrimp", "Green onions", "Vegetable oil"]
+
       }
     ]
   },
@@ -448,48 +569,66 @@
       {
         "step": "Mix rice flour, cornstarch, turmeric powder, salt, coconut milk, water, and sliced green onions into a smooth batter",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": [
+          "Rice flour",
+          "Cornstarch",
+          "Ground turmeric",
+          "Salt",
+          "Coconut milk",
+          "Water",
+          "Green onions"
+        ]
       },
       {
         "step": "Let the batter rest for at least 30 minutes",
-        "note": "",
-        "time": 30
+        "note": "", 
+        "time": 30,
+        "stepIngredients": []
       },
       {
         "step": "Heat a nonstick skillet over medium-high and add a little oil",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Vegetable oil"]
       },
       {
         "step": "Add a few pork slices and shrimp, cook until pork is no longer pink and shrimp is just cooked",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Pork belly", "Shrimp"]
       },
       {
         "step": "Pour in a thin layer of batter, swirl to coat the pan",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Rice flour", "Cornstarch", "Ground turmeric", "Coconut milk", "Water", "Green onions"]
+
       },
-      { "step": "Top with bean sprouts", "note": "", "time": 0 },
+      { "step": "Top with bean sprouts", "note": "", "time": 0 ,"stepIngredients": ["Vegetable oil"] },
       {
         "step": "Cover and cook until edges are crispy and bottom is golden (about 4 minutes)",
         "note": "",
-        "time": 4
+        "time": 4,
+        "stepIngredients": ["Rice flour", "Pork belly", "Shrimp", "Bean sprouts"]
       },
       {
         "step": "Fold crepe in half and slide onto a plate",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       },
       {
         "step": "Repeat with remaining batter and fillings",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       },
       {
         "step": "Serve with lettuce, herbs, and dipping sauce",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Lettuce leaves", "Fresh herbs", "Dipping sauce"]
       }
     ]
   },
@@ -522,37 +661,44 @@
       {
         "step": "Soak glutinous rice and mung beans in water for several hours.",
         "note": "",
-        "time": 240
+        "time": 240,
+        "stepIngredients": ["Glutinous rice", "Peeled split mung beans", "Water"]
       },
       {
         "step": "Season pork with fish sauce, salt, and pepper.",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Pork belly", "Fish sauce", "Salt", "Pepper"]
       },
       {
         "step": "Drain soaked mung beans, steam them until soft, and mash.",
         "note": "",
-        "time": 40
+        "time": 40,
+        "stepIngredients": ["Peeled split mung beans", "Water"]
       },
       {
         "step": "Rinse and dry banana leaves, cut to size for wrapping.",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Banana leaves"]
       },
       {
         "step": "Layer banana leaves, add rice, mung bean, pork, and more rice, fold and wrap tightly with twine.",
         "note": "",
-        "time": 30
+        "time": 30,
+        "stepIngredients": ["Banana leaves", "Glutinous rice", "Peeled split mung beans", "Pork belly"]
       },
       {
         "step": "Boil in a large pot of water (or steam) for about 6 hours (larger batches can take longer).",
         "note": "",
-        "time": 360
+        "time": 360,
+        "stepIngredients": ["Water", "Banana leaves"]
       },
       {
         "step": "Remove, allow to cool, and slice to serve.",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       }
     ]
   },
@@ -576,28 +722,33 @@
       {
         "step": "Mix rice flour, tapioca starch, sugar, salt, coconut milk, and pandan extract in a bowl until smooth",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Rice flour", "Tapioca starch", "Sugar", "Salt", "Coconut milk", "Pandan extract"]
       },
       { "step": "Lightly grease a cake pan with oil", "note": "", "time": 0 },
       {
         "step": "Pour a thin layer of batter into the cake pan and steam until set (about 7 minutes)",
         "note": "",
-        "time": 7
+        "time": 7,
+        "stepIngredients": ["Rice flour", "Tapioca starch", "Sugar", "Salt", "Coconut milk", "Pandan extract"]
       },
       {
         "step": "Pour another layer of batter and steam until set (about 7 minutes)",
         "note": "",
-        "time": 7
+        "time": 7,
+        "stepIngredients": ["Rice flour", "Tapioca starch", "Sugar", "Salt", "Coconut milk", "Pandan extract"]
       },
       {
         "step": "Repeat until all batter is used, alternating colors if desired",
         "note": "",
-        "time": 28
+        "time": 28,
+        "stepIngredients": ["Rice flour", "Tapioca starch", "Sugar", "Salt", "Coconut milk", "Pandan extract"]
       },
       {
         "step": "Let cake cool completely before removing from pan and slicing",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       }
     ]
   },
@@ -628,37 +779,43 @@
       {
         "step": "Boil mung beans until soft (about 30 minutes)",
         "note": "",
-        "time": 30
+        "time": 30,
+        "stepIngredients": ["Mung beans (hulled, split)", "Water"]
       },
       {
         "step": "Mash cooked mung beans with coconut milk, sugar, and salt for the filling",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Mung beans (hulled, split)", "Coconut milk", "Sugar", "Salt"]
       },
       {
         "step": "Mix glutinous rice flour, sugar, baking powder, and water to make a smooth dough",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Glutinous rice flour", "Sugar", "Baking powder", "Water"]
       },
       {
         "step": "Divide dough into small balls and flatten to wrap around a small amount of mung bean filling",
         "note": "",
-        "time": 0
-      },
+        "time": 0,
+        "stepIngredients": ["Glutinous rice flour", "Mung beans (hulled, split)"]      },
       {
         "step": "Seal and roll each ball in sesame seeds to coat",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Sesame seeds"]
       },
       {
         "step": "Heat oil to 325°F (163°C) and deep fry the balls until golden brown (about 8-10 minutes per batch)",
         "note": "Stir often for even browning",
-        "time": 10
+        "time": 10,
+        "stepIngredients": ["Vegetable oil"]
       },
       {
         "step": "Drain on a rack or paper towels and cool before serving",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       }
     ]
   },
@@ -696,43 +853,51 @@
       {
         "step": "Mix ground pork, chopped shrimp, green onions, soy sauce, sesame oil, white pepper, and salt to make wonton filling",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Ground pork", "Shrimp", "Green onion", "Soy sauce", "Sesame oil", "White pepper", "Salt"]
       },
       {
         "step": "Place a teaspoon of filling in each wonton wrapper and fold to seal",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Wonton wrappers", "Ground pork", "Shrimp"]
       },
       {
         "step": "Bring a large pot of chicken or pork stock to a gentle boil",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Chicken or pork stock"]
       },
       {
         "step": "Drop wontons into stock and cook until they float (about 5 minutes)",
         "note": "",
-        "time": 5
+        "time": 5,
+        "stepIngredients": ["Wonton wrappers", "Ground pork", "Shrimp", "Chicken or pork stock"]
       },
       {
         "step": "Cook egg noodles per package instructions (about 6 minutes)",
         "note": "",
-        "time": 6
+        "time": 6,
+        "stepIngredients": ["Egg noodles", "Water"]
       },
       {
         "step": "Blanch bok choy in boiling water until just tender (about 2 minutes)",
         "note": "",
-        "time": 2
+        "time": 2,
+        "stepIngredients": ["Bok choy", "Water"]
       },
-      { "step": "Place noodles in serving bowls", "note": "", "time": 0 },
+      { "step": "Place noodles in serving bowls", "note": "", "time": 0, "stepIngredients": ["Egg noodles"] },
       {
         "step": "Top with wontons, bok choy, and char siu pork if using",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Wontons", "Bok choy", "Char siu pork"]
       },
       {
         "step": "Ladle hot broth over, garnish with fried shallots and green onion, and serve",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Chicken or pork stock", "Fried shallots", "Green onion"]
       }
     ]
   },
@@ -767,32 +932,38 @@
       {
         "step": "Mix garlic, shallots, lemongrass, sugar, fish sauce, soy sauce, honey, black pepper, and oil to make the marinade",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Garlic", "Shallots", "Lemongrass", "Sugar", "Fish sauce", "Soy sauce", "Honey", "Black pepper", "Vegetable oil"]
       },
       {
         "step": "Add sliced pork to the marinade and mix thoroughly",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Pork shoulder (or pork chops)"]
       },
       {
         "step": "Marinate pork for at least 1 hour (or overnight)",
         "note": "",
-        "time": 60
+        "time": 60,
+        "stepIngredients": ["Pork shoulder (or pork chops)"]
       },
       {
         "step": "Preheat grill or broiler to medium-high",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       },
       {
         "step": "Grill pork slices until caramelized and cooked through (about 3-5 minutes per side)",
         "note": "",
-        "time": 10
+        "time": 10,
+        "stepIngredients": ["Pork shoulder (or pork chops)"]
       },
       {
         "step": "Serve with rice noodles, lettuce, herbs, pickled vegetables, and dipping sauce",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       }
     ]
   },
@@ -823,42 +994,50 @@
       {
         "step": "Boil eggs until hard (about 10 minutes), then peel",
         "note": "",
-        "time": 10
+        "time": 10,
+        "stepIngredients": ["Eggs", "Water"]
       },
       {
         "step": "Make caramel by heating sugar in a pot until melted and deep amber",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Brown sugar or rock sugar"]
       },
       {
         "step": "Add pork belly to the caramel and sear briefly",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Pork belly"]
       },
       {
         "step": "Add garlic, shallots, fish sauce, soy sauce, salt, and black pepper to the pork",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Garlic", "Shallots", "Fish sauce", "Soy sauce", "Salt", "Black pepper"]
       },
       {
         "step": "Pour in coconut water until pork is just covered",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Coconut water"]
       },
       {
         "step": "Bring to a boil, then reduce heat, cover, and simmer for 60 minutes",
         "note": "",
-        "time": 60
+        "time": 60,
+        "stepIngredients": ["Pork belly", "Coconut water"]
       },
       {
         "step": "Add the peeled eggs to the pot and continue to simmer uncovered for 30 minutes",
         "note": "",
-        "time": 30
+        "time": 30,
+        "stepIngredients": ["Eggs"]
       },
       {
         "step": "Serve hot over steamed rice, with plenty of sauce",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": []
       }
     ]
   },
@@ -909,42 +1088,50 @@
       {
         "step": "Blanch pork bones in boiling water for 5 minutes, then rinse",
         "note": "",
-        "time": 5
+        "time": 5,
+        "stepIngredients": ["Pork bones", "Water"]
       },
       {
         "step": "In a clean pot, add pork bones, dried squid/shrimp, daikon, and onion, cover with water and simmer for at least 90 minutes",
         "note": "",
-        "time": 90
+        "time": 90,
+        "stepIngredients": ["Pork bones", "Dried squid or dried shrimp", "Daikon", "Onion", "Water"]
       },
       {
         "step": "Remove bones and vegetables from broth, season with fish sauce, sugar, salt",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Fish sauce", "Sugar", "Salt"]
       },
       {
         "step": "Boil pork shoulder slices in broth until just cooked (about 5 minutes), remove and set aside",
         "note": "",
-        "time": 5
+        "time": 5,
+        "stepIngredients": ["Pork shoulder", "Pork bones (broth)"]
       },
       {
         "step": "Boil shrimp (or squid) in broth until pink (about 2 minutes), remove and set aside",
         "note": "",
-        "time": 2
+        "time": 2,
+        "stepIngredients": ["Shrimp (or squid)", "Pork bones (broth)"]
       },
       {
         "step": "Cook hủ tiếu noodles according to package instructions (about 5 minutes)",
         "note": "",
-        "time": 5
+        "time": 5,
+        "stepIngredients": ["Hủ tiếu noodles (or tapioca/rice sticks)", "Water"]
       },
       {
         "step": "To serve, add noodles to bowls, top with pork, shrimp, bean sprouts, and herbs",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Hủ tiếu noodles (or tapioca/rice sticks)", "Pork shoulder", "Shrimp (or squid)", "Bean sprouts", "Scallions & cilantro"]
       },
       {
         "step": "Ladle hot broth over, finish with fried garlic oil and a squeeze of lime",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Garlic oil (fried garlic in oil)", "Lime wedges"]
       }
     ]
   },
@@ -986,38 +1173,35 @@
       {
         "step": "Slice baguettes in half lengthwise but not all the way through",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Vietnamese-style baguette"]
       },
-      {
-        "step": "Warm baguettes in the oven until crispy (about 5 minutes)",
-        "note": "",
-        "time": 5
-      },
+      { "step": "Warm baguettes in the oven until crispy (about 5 minutes)", "note": "", "time": 5, "stepIngredients": ["Vietnamese-style baguette"] },
       {
         "step": "Spread pâté and mayonnaise evenly on both sides of each baguette",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Pâté (pork or chicken liver)", "Mayonnaise"]
       },
       {
         "step": "Layer in your choice of grilled meat, cold cuts, or tofu",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Grilled pork, chicken, cold cuts, or tofu"]
       },
       {
         "step": "Add pickled carrot and daikon, cucumber, cilantro, and sliced chili",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Pickled carrot and daikon", "Cucumber", "Fresh cilantro", "Jalapeño or bird's eye chili"]
       },
       {
         "step": "Drizzle lightly with soy sauce or Maggi seasoning",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Soy sauce or Maggi seasoning"]
       },
-      {
-        "step": "Close the sandwich and serve immediately",
-        "note": "",
-        "time": 0
-      }
+      { "step": "Close the sandwich and serve immediately", "note": "", "time": 0, "stepIngredients": [] }
     ]
   },
   {
@@ -1070,47 +1254,56 @@
       {
         "step": "Blanch beef shank and pork hock in boiling water for 3 minutes, then rinse",
         "note": "",
-        "time": 3
+        "time": 3,
+        "stepIngredients": ["Beef shank or brisket", "Pork hock", "Water"]
       },
       {
         "step": "In a clean pot, add beef, pork hocks, lemongrass, shallots, garlic, ginger, and fill with water to cover. Simmer for 90 minutes",
         "note": "",
-        "time": 90
+        "time": 90,
+        "stepIngredients": ["Beef shank or brisket", "Pork hock", "Lemongrass stalks", "Red shallots", "Garlic cloves", "Ginger", "Water"]
       },
       {
         "step": "Remove beef, pork hock and aromatics. Slice meat to desired thickness, return bones to pot",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Beef shank or brisket", "Pork hock"]
       },
       {
         "step": "Season broth with fish sauce, salt, and rock sugar. Add shrimp paste if using",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Fish sauce", "Salt", "Rock sugar", "Shrimp paste (optional)"]
       },
       {
         "step": "If using, add pork blood cake cubes and simmer for 10 minutes",
         "note": "",
-        "time": 10
+        "time": 10,
+        "stepIngredients": ["Pork blood cake (optional)"]
       },
       {
         "step": "Prepare bún noodles according to package instructions (about 10 minutes)",
         "note": "",
-        "time": 10
+        "time": 10,
+        "stepIngredients": ["Bún (round rice noodles)", "Water"]
       },
       {
         "step": "Optional: Prepare chili oil by frying chopped garlic and chili in oil until fragrant",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Fresh chili", "Vegetable oil", "Garlic cloves"]
       },
       {
         "step": "To serve, add noodles to bowls, top with beef, pork hock, herbs, and banana blossom or cabbage",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Bún (round rice noodles)", "Beef shank or brisket", "Pork hock", "Green onions, cilantro, mint, basil", "Banana blossom or cabbage"]
       },
       {
         "step": "Ladle hot broth over, garnish with green onions, cilantro, basil, fresh chili, a squeeze of lime, and chili oil",
         "note": "",
-        "time": 0
+        "time": 0,
+        "stepIngredients": ["Green onions, cilantro, mint, basil", "Fresh chili", "Lime wedges", "Chili oil (sa tế)"]
       }
     ]
   }

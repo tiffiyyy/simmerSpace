@@ -130,6 +130,7 @@
         "step": "Char the onions and ginger. Toast the spices until aromatic.",
         "note": "Charring the aromatics adds depth to the broth.",
         "time": 0,
+        "video":"https://youtu.be/bcKEPZcVa3Q?si=1CnX5cFW0Lp6j72d&t=24",
         "stepIngredients": [
           "Onion",
           "Ginger",
@@ -168,6 +169,7 @@
         "step": "Simmer for 3 hours, skimming scum off the surface as needed.",
         "note": "",
         "time": 180,
+        "video":"https://youtu.be/bcKEPZcVa3Q?si=1CnX5cFW0Lp6j72d&t=84",
         "stepIngredients": [
           "Meaty beef bones",
           "Marrow bones (leg, knuckle)",
@@ -207,6 +209,7 @@
         "step": "To serve, add noodles to bowl, top with brisket slices and raw thinly-sliced beef tenderloin.",
         "note": "",
         "time": 0,
+        "video":"https://youtu.be/bcKEPZcVa3Q?si=1CnX5cFW0Lp6j72d&t=113",
         "stepIngredients": ["Rice noodles", "Beef brisket", "Beef tenderloin"]
 
       },
@@ -214,6 +217,7 @@
         "step": "Ladle boiling hot broth over the beef to cook it.",
         "note": "The heat of the broth cooks the beef.",
         "time": 0,
+        "video":"https://youtu.be/bcKEPZcVa3Q?si=1CnX5cFW0Lp6j72d&t=122",
         "stepIngredients": ["Beef tenderloin", "Beef brisket", "Meaty beef bones", "Marrow bones (leg, knuckle)"]
 
       },
@@ -271,6 +275,7 @@
         "step": "Soak bean threads and wood ear mushrooms in hot water until soft (about 30 min)",
         "note": "",
         "time": 30,
+        "video": "https://www.youtube.com/watch?v=azJVUd-jbJY&t=25", 
         "stepIngredients": ["Bean thread noodles", "Wood ear mushrooms", "Water"]
 
       },
@@ -286,12 +291,12 @@
         "note": "",
         "time": 0,
         "stepIngredients": ["Bean thread noodles", "Wood ear mushrooms"]
-
       },
       {
         "step": "Mix bean thread, mushrooms, onion, salt, pepper, sugar; add pork and jícama",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=azJVUd-jbJY&t=155", 
         "stepIngredients": [
           "Bean thread noodles",
           "Wood ear mushrooms",
@@ -313,12 +318,14 @@
         "step": "Mix water and flour to make sealing paste",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=azJVUd-jbJY&t=194", 
         "stepIngredients": ["Water", "Flour"]
       },
       {
         "step": "Wrap egg rolls, sealing the edge with paste",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=azJVUd-jbJY&t=210", 
         "stepIngredients": ["Egg roll wrappers (Menlo Brand or similar)", "Water", "Flour"]
 
       },
@@ -326,6 +333,7 @@
         "step": "Fry at 325°F until golden brown and cooked inside (about 14 mins per batch)",
         "note": "",
         "time": 14,
+        "video": "https://www.youtube.com/watch?v=azJVUd-jbJY&t=259", 
         "stepIngredients": ["Vegetable oil", "Egg roll wrappers (Menlo Brand or similar)", "Ground pork"]
 
       }
@@ -361,9 +369,16 @@
         "step": "Poach pork belly with a pinch of salt until cooked through (about 30 min)",
         "note": "",
         "time": 30,
+        "video": "https://www.youtube.com/watch?v=W7mZUwyAa_&t=195", 
         "stepIngredients": ["Pork belly", "Salt", "Water"]
       },
-      { "step": "Slice the cooked pork belly thinly", "note": "", "time": 0, "stepIngredients": ["Pork belly"] },
+      { 
+        "step": "Slice the cooked pork belly thinly", 
+        "note": "", 
+        "time": 0, 
+        "video": "https://www.youtube.com/watch?v=5QWMkbyWqOE&t=112", 
+        "stepIngredients": ["Pork belly"] 
+      },
       {
         "step": "Boil shrimp until just cooked (about 2 - 4 min)",
         "note": "",
@@ -374,6 +389,7 @@
         "step": "Peel and halve the cooked shrimp lengthwise",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=5QWMkbyWqOE&t=121",
         "stepIngredients": ["Shrimp"]
       },
       {
@@ -392,18 +408,21 @@
         "step": "Set up a rolling station with all prepared ingredients",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=5QWMkbyWqOE&t=190",
         "stepIngredients": []
       },
       {
         "step": "Dip one rice paper in warm water for a few seconds to soften",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=5QWMkbyWqOE&t=193",
         "stepIngredients": ["Rice paper wrappers", "Water"]
       },
       {
         "step": "Layer noodles, lettuce, herbs, pork, and shrimp on the center of the wrapper",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=5QWMkbyWqOE&t=200",
         "stepIngredients": [
           "Rice vermicelli noodles",
           "Green leaf lettuce",
@@ -418,6 +437,7 @@
         "step": "Roll the rice paper up tightly to enclose the filling",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=5QWMkbyWqOE&t=223",
         "stepIngredients": []
       },
       {

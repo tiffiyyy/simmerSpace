@@ -1177,10 +1177,10 @@
   grid-template-areas: 
     "instruction media timer"
     "instruction ingredients ingredients"
-    "navigation navigation navigation"
-    "progress progress progress";
+    "progress progress progress"
+    "navigation navigation navigation";
   grid-template-columns: 1fr 1fr 250px;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: 175px 300px auto auto;
   min-height: 100vh;
   padding: var(--spacing-md);
   gap: var(--spacing-md);
@@ -1247,9 +1247,10 @@
   padding: 0;
   cursor: pointer;
   width: 100%;
-  max-width: 400px;
+  height: 100%;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+  display: block;
 }
 
 .video-link:focus,
@@ -1288,7 +1289,7 @@
   justify-content: center;
   align-items: center;
   gap: var(--spacing-md);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--white);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   background: var(--secondary-brown);
@@ -1296,9 +1297,26 @@
   border-radius: var(--radius-lg);
   width: 100%;
   height: 100%;
+  min-height: 175px;
   transition: all var(--transition-normal);
   outline: none;
   border: none;
+  text-align: center;
+}
+
+.cooking-placeholder {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 85px;
+}
+
+.cooking-placeholder p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .video-placeholder {
@@ -1307,10 +1325,12 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-sm);
+  height: 100%;
+  min-height: 175px;
 }
 
 .play-icon {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--white);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -1347,6 +1367,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-sm);
 }
 
@@ -1385,6 +1406,8 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: var(--shadow-xl), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
 }
 
 .ingredients-header h3 {
@@ -1399,6 +1422,27 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  flex: 1;
+  overflow-y: auto;
+  padding-right: var(--spacing-xs);
+}
+
+.ingredients-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ingredients-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.ingredients-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.ingredients-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .ingredient-item {
@@ -1424,7 +1468,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-lg) 0;
+  padding: var(--spacing-sm) 0;
+  margin-top: -var(--spacing-lg);
 }
 
 .nav-buttons {

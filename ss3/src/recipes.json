@@ -612,12 +612,14 @@
         "step": "Add a few pork slices and shrimp, cook until pork is no longer pink and shrimp is just cooked",
         "note": "",
         "time": 0,
+        "video": "https://youtu.be/ws617BJj5l4?si=fn3qudxu9zmFJ-aB&t=634",
         "stepIngredients": ["Pork belly", "Shrimp"]
       },
       {
         "step": "Pour in a thin layer of batter, swirl to coat the pan",
         "note": "",
         "time": 0,
+        "video": "https://youtu.be/ws617BJj5l4?si=fn3qudxu9zmFJ-aB&t=657",
         "stepIngredients": ["Rice flour", "Cornstarch", "Ground turmeric", "Coconut milk", "Water", "Green onions"]
 
       },
@@ -702,6 +704,7 @@
         "step": "Layer banana leaves, add rice, mung bean, pork, and more rice, fold and wrap tightly with twine.",
         "note": "",
         "time": 30,
+        "video": "https://youtu.be/naFfgoIbdiI?si=V1fobk_NgpAMd5Ej&t=8",
         "stepIngredients": ["Banana leaves", "Glutinous rice", "Peeled split mung beans", "Pork belly"]
       },
       {
@@ -790,11 +793,19 @@
       { "item": "Salt", "quantity": "1/4", "unit": "tsp" },
       { "item": "Vegetable oil", "quantity": "for deep frying", "unit": "" }
     ],
+    
     "steps": [
-      { "step": "Soak mung beans for 1-2 hours", "note": "", "time": 60 },
+      { "step": "Rinse mung beans until water runs clear",
+        "note": "", 
+        "time": 0, 
+        "stepIngredients": ["Mung beans (hulled, split)", "Water"] },
+      { "step": "Soak mung beans for 1-2 hours", 
+        "note": "", 
+        "time": 60, 
+        "stepIngredients": ["Mung beans (hulled, split)", "Water"] },
       {
         "step": "Boil mung beans until soft (about 30 minutes)",
-        "note": "",
+        "note": "Could bubble up a bit so keep an eye on it",
         "time": 30,
         "stepIngredients": ["Mung beans (hulled, split)", "Water"]
       },
@@ -802,6 +813,13 @@
         "step": "Mash cooked mung beans with coconut milk, sugar, and salt for the filling",
         "note": "",
         "time": 0,
+        "stepIngredients": ["Mung beans (hulled, split)", "Coconut milk", "Sugar", "Salt"]
+      },
+      {
+        "step": "Shape mung bean mixture into balls",
+        "note": "",
+        "time": 0,
+        "video": "https://youtu.be/1UAAIxxrqxg?si=iMPjGlCZDq2t3pVp&t=362",
         "stepIngredients": ["Mung beans (hulled, split)", "Coconut milk", "Sugar", "Salt"]
       },
       {

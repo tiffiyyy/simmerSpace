@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename={XR_ENV_BASE}>
+      <BrowserRouter basename={__XR_ENV_BASE__}>
         <Routes>
           {/* route to ingredients page */}
           <Route

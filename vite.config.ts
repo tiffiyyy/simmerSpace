@@ -22,6 +22,6 @@ export default defineConfig({
     }),
   ],
   define: {
-    XR_ENV_BASE: JSON.stringify(process.env.VITE_BASE || "/"),
+    __XR_ENV_BASE__: JSON.stringify(process.env.VITE_BASE || "/"),
   },
 });

@@ -175,7 +175,9 @@ function Ingredients() {
               {/* navigate to step 1 when user clicks "Start Recipe" button */}
               setTimeout(() => {
                 // window.open(`${__XR_ENV_BASE__}/recipe/${recipe.id}/step/1`, "recipeSteps");
-                window.location.href = `${__XR_ENV_BASE__}/recipe/${recipe.id}/step/1`;
+                const basePath = __XR_ENV_BASE__ === '/' ? '' : __XR_ENV_BASE__;
+                // window.open(`${basePath}/recipe/${recipe.id}/step/1`, "recipeSteps");
+                window.location.href = `${basePath}/recipe/${recipe.id}/step/1`;
               }, 0);
             }}
           >

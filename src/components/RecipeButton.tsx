@@ -50,7 +50,8 @@ const RecipeButton: React.FC<RecipeButtonProps> = ({
     // }, 0);
     // Navigate to recipe ingredients on the same page
     setTimeout(() => {
-      window.location.href = `${__XR_ENV_BASE__}/recipe/${recipeId}/ingredients`;
+      const basePath = __XR_ENV_BASE__ === '/' ? '' : __XR_ENV_BASE__;
+      window.location.href = `${basePath}/recipe/${recipeId}/ingredients`;
     }, 0);
   };
 

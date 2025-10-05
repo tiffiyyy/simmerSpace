@@ -196,7 +196,8 @@ function Steps() {
                       },
                     };
                   });
-                  window.open(`${__XR_ENV_BASE__}/timer/${recipeId}/${currentStep + 1}/${stepTime}`, "timer");
+                  const basePath = __XR_ENV_BASE__ === '/' ? '' : __XR_ENV_BASE__;
+                  window.open(`${basePath}/timer/${recipeId}/${currentStep + 1}/${stepTime}`, "timer");
                 }}
               >
                 ▶

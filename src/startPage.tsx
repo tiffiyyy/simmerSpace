@@ -76,9 +76,6 @@ const StartPage: React.FC = () => {
           </>
         )}
       </div>
-      <div className="start-page-content">
-        {/* Your fresh start page content goes here */}
-      </div>
     </div>
   );
 };

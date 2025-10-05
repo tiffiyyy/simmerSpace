@@ -135,7 +135,7 @@ function Ingredients() {
               className="dish-image"
               onError={(e) => {
                 // Fallback to a default image if specific recipe image not found
-                e.currentTarget.src = '../public/assets/granny-stirring-pot.png';
+                e.currentTarget.src = '/assets/granny-stirring-pot.png';
               }}
             />
             

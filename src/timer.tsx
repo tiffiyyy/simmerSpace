@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import "./App.css";
 import recipesData from "./recipes.json";
-// import alarmSound from "../public/assets/timer-terminer-342934.mp3";
 
 interface Recipe {
   id: string;
@@ -187,7 +186,7 @@ function Timer() {
       
       
       {/* Hidden Audio Element for Alarm */}
-      <audio ref={audioRef} src='../public/assets/timer-terminer-342934.mp3' preload="auto" />
+      <audio ref={audioRef} src='/assets/timer-terminer-342934.mp3' preload="auto" />
       
       {/* Main Timer Container */}
       <div className="recipe-card-overlay">

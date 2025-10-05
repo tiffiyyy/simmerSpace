@@ -3,7 +3,7 @@
     "id": "che-bap",
     "name": "Chè Bắp",
     "englishName": "Vietnamese Sweet Corn Pudding",
-    "image": "../public/assets/images/che-bap.png",
+    "image": "/assets/images/che-bap.png",
     "estimatedTime": 46,
     "description": "Chè Bắp is a Vietnamese dessert made with corn, sugar, and tapioca starch. It is a refreshing and sweet treat that is perfect for a hot day.",
     "ingredients": [
@@ -82,7 +82,7 @@
     "id": "pho-bo",
     "name": "Phở Bò",
     "englishName": "Vietnamese Beef Pho",
-    "image": "../public/assets/images/pho-bo.png",
+    "image": "/assets/images/pho-bo.png",
     "estimatedTime": 239,
     "description": "Phở Bò is a Vietnamese beef noodle soup with a clear broth, beef brisket, and rice noodles.",
     "ingredients": [
@@ -242,7 +242,7 @@
     "id": "cha-gio",
     "name": "Chả Giò",
     "englishName": "Vietnamese Egg Rolls",
-    "image": "../public/assets/images/cha-gio.png",
+    "image": "/assets/images/cha-gio.png",
     "estimatedTime": 77,
     "description": "Chả Giò are crispy Vietnamese egg rolls filled with pork, mushrooms, jícama, and noodles, wrapped in rice paper or wheat wrappers and deep-fried until golden. A classic appetizer or party food, they are served with lettuce, herbs, and nuoc cham dipping sauce.",
     "ingredients": [
@@ -343,7 +343,7 @@
     "id": "goi-cuon",
     "name": "Gỏi Cuốn",
     "englishName": "Vietnamese Spring Rolls",
-    "image": "../public/assets/images/goi-cuon.png",
+    "image": "/assets/images/goi-cuon.png",
     "estimatedTime": 74,
     "description": "Gỏi Cuốn are refreshing Vietnamese spring rolls filled with pork, shrimp, rice noodles, lettuce, and fresh herbs all wrapped in rice paper. These light, healthy rolls are typically served with a savory peanut or nuoc cham dipping sauce.",
     "ingredients": [
@@ -452,7 +452,7 @@
     "id": "banh-beo",
     "name": "Bánh Bèo",
     "englishName": "Vietnamese Steamed Rice Cakes",
-    "image": "../public/assets/images/banh-beo.png",
+    "image": "/assets/images/banh-beo.png",
     "estimatedTime": 674,
     "description": "Bánh Bèo are delicate steamed rice cakes originating from Huế, Vietnam. Each small, round cake is topped with mung bean paste, savory dried shrimp, crispy shallots, scallion oil, and served with a sweetened fish sauce.",
     "ingredients": [
@@ -555,7 +555,7 @@
     "id": "banh-xeo",
     "name": "Bánh Xèo",
     "englishName": "Vietnamese Sizzling Crepes",
-    "image": "../public/assets/images/banh-xeo.png",
+    "image": "/assets/images/banh-xeo.png",
     "estimatedTime": 90,
     "description": "Bánh Xèo are savory, crispy Vietnamese rice crepes flavored with coconut milk and turmeric, and filled with pork, shrimp, and bean sprouts. The name 'bánh xèo' refers to the sizzling sound these crepes make when batter hits the hot skillet. They are typically served with fresh herbs, lettuce, and a dipping sauce.",
     "ingredients": [
@@ -654,7 +654,7 @@
     "id": "banh-chung",
     "name": "Bánh Chưng / Bánh Tét",
     "englishName": "Sticky Rice Cake Variants",
-    "image": "../public/assets/images/banh-chung-temp.png",
+    "image": "/assets/images/banh-chung-temp.png",
     "estimatedTime": 360,
     "description": "Bánh Chưng (square), Bánh Tét (cylindrical), and Bánh Tổ (variation) are traditional Vietnamese sticky rice cakes made with glutinous rice, mung beans, and pork, wrapped in banana leaves and boiled or steamed. They are a central delicacy at Tết (Lunar New Year) celebrations.",
     "ingredients": [
@@ -725,7 +725,7 @@
     "id": "banh-dau-xanh",
     "name": "Bánh Đậu Xanh",
     "englishName": "Vietnamese Pandan Layer Cake",
-    "image": "../public/assets/images/banh-dau-xanh.png",
+    "image": "/assets/images/banh-dau-xanh.png",
     "estimatedTime": 55,
     "description": "Bánh Đậu Xanh is a Vietnamese steamed pandan cake, recognized for its beautiful green color and soft, chewy layers. Made with rice flour, tapioca starch, pandan extract, sugar, and coconut milk, it's a fragrant, lightly sweet treat often enjoyed as a snack or at celebrations.",
     "ingredients": [
@@ -775,7 +775,7 @@
     "id": "banh-cam",
     "name": "Bánh Cam",
     "englishName": "Vietnamese Sesame Balls",
-    "image": "../public/assets/images/banh-cam.png",
+    "image": "/assets/images/banh-cam.png",
     "estimatedTime": 130,
     "description": "Bánh Cam are delicious Vietnamese fried sesame balls with a crispy golden shell and tender, chewy glutinous rice flour dough. The filling is sweet mung bean paste, and each ball is rolled in sesame seeds before deep frying.",
     "ingredients": [
@@ -857,7 +857,7 @@
     "id": "mi-hoanh-thanh",
     "name": "Mì Hoành Thánh",
     "englishName": "Egg Noodle Soup with Wontons",
-    "image": "../public/assets/images/mi-hoanh-thanh.png",
+    "image": "/assets/images/mi-hoanh-thanh.png",
     "estimatedTime": 70,
     "description": "Mì Hoành Thánh is a comforting noodle soup with springy egg noodles, delicate pork and shrimp wontons, and clear, fragrant broth. It is often served with leafy greens and sometimes slices of Chinese BBQ pork (xá xíu).",
     "ingredients": [
@@ -939,7 +939,7 @@
     "id": "thit-nuong",
     "name": "Thịt Nướng",
     "englishName": "Vietnamese Grilled Pork",
-    "image": "../public/assets/images/thit-nuong.png",
+    "image": "/assets/images/thit-nuong.png",
     "estimatedTime": 75,
     "description": "Thịt Nướng features thinly sliced pork shoulder marinated in lemongrass, garlic, sugar, fish sauce, and other seasonings, then grilled or broiled to a caramelized finish. Commonly served with rice noodles (bún), herbs, pickled vegetables, or in a bánh mì sandwich.",
     "ingredients": [
@@ -1005,7 +1005,7 @@
     "id": "thit-kho-trung",
     "name": "Thịt Kho Trứng",
     "englishName": "Vietnamese Braised Pork with Eggs",
-    "image": "../public/assets/images/thit-kho-trung.png",
+    "image": "/assets/images/thit-kho-trung.png",
     "estimatedTime": 110,
     "description": "Thịt Kho Trứng is a southern Vietnamese comfort dish of pork belly and eggs slowly braised in coconut water, fish sauce, and caramelized sugar. The meat becomes meltingly tender and the eggs soak up the rich, savory-sweet sauce.",
     "ingredients": [
@@ -1079,7 +1079,7 @@
     "id": "hu-tieu",
     "name": "Hủ Tiếu",
     "englishName": "Vietnamese Pork and Seafood Noodle Soup",
-    "image": "../public/assets/images/hu-tieu.png",
+    "image": "/assets/images/hu-tieu.png",
     "estimatedTime": 120,
     "description": "Hủ Tiếu is a savory, aromatic noodle soup from southern Vietnam, distinguished by its delicate clear pork broth, chewy rice noodles, sliced pork, shrimp or seafood, fried garlic, and crisp vegetables. It’s often served with fresh bean sprouts and lime.",
     "ingredients": [
@@ -1173,7 +1173,7 @@
     "id": "banh-mi",
     "name": "Bánh Mì",
     "englishName": "Vietnamese Baguette Sandwich",
-    "image": "../public/assets/images/banh-mi.png",
+    "image": "/assets/images/banh-mi.png",
     "estimatedTime": 40,
     "description": "Bánh Mì is Vietnam's beloved sandwich, featuring a crispy French baguette loaded with savory grilled or cold meats, pickled vegetables, cucumber, fresh cilantro, spicy chilis, and creamy mayonnaise. It’s the perfect fusion of French and Vietnamese flavors.",
     "ingredients": [
@@ -1242,7 +1242,7 @@
     "id": "bun-bo-hue",
     "name": "Bún Bò Huế",
     "englishName": "Spicy Vietnamese Beef Noodle Soup",
-    "image": "../public/assets/images/bun-bo-hue.png",
+    "image": "/assets/images/bun-bo-hue.png",
     "estimatedTime": 195,
     "description": "Bún Bò Huế is a central Vietnamese noodle soup famous for its spicy, lemongrass-infused beef broth, thick rice vermicelli, sliced beef, pork hock, and pork blood cake (optional), all garnished with fresh herbs, lime, and chili.",
     "ingredients": [

@@ -7,7 +7,6 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "Node16",
     "skipLibCheck": true,
-    "ignoreDeprecations": "6.0",
 
     /* resolves jsx-runtime errors */
     "moduleResolution": "node16",

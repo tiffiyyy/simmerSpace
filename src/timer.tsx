@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import "./App.css";
 import recipesData from "./recipes.json";
-import alarmSound from "./assets/timer-terminer-342934.mp3";
+import alarmSound from "../public/assets/timer-terminer-342934.mp3";
 
 interface Recipe {
   id: string;

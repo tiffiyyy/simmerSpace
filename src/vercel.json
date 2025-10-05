@@ -1,5 +1,11 @@
 {
+    "framework": "vite",
+    "installCommand": "npm ci",
+    "buildCommand": "XR_ENV=avp npm run build",
+    "outputDirectory": "dist",
+    "env": { "XR_ENV": "avp" },
     "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
+      { "source": "/assets/(.)", "destination": "/assets/$1" },
+      { "source": "/(.)", "destination": "/index.html" }
     ]
-}
+  }

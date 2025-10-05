@@ -1,7 +1,6 @@
 import "./App.css";
 // import routing components
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import webspatial SDK
+import { BrowserRouter, Routes, Route } from "react-router-dom";// import webspatial SDK
 //import { initScene } from "@webspatial/react-sdk";
 
 // import recipe steps and ingredients below
@@ -27,7 +26,7 @@ function App() {
 
   return (
     <>
-      <Router basename={__XR_ENV_BASE__}>
+      <BrowserRouter basename={XR_ENV_BASE}>
         <Routes>
           {/* route to ingredients page */}
           <Route
@@ -40,6 +39,7 @@ function App() {
           <Route path={`/timer/:recipeId/:stepNumber/:duration`} element={<Timer />} />
           {/* route to start page */}
           <Route path="/" element={<StartPage />} />
+          <Route path="/webspatial/avp" element={<StartPage />} />
           {/* route to recipe selection */}
           <Route
             path="/recipes"
@@ -78,7 +78,7 @@ function App() {
             }
           />
         </Routes>
-      </Router>
+        </BrowserRouter>
     </>
   );
 }

@@ -5,9 +5,14 @@ import { createHtmlPlugin } from "vite-plugin-html";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/",
   plugins: [
-    react(),
-    webSpatial(),
+    react({
+      jsxImportSource: '@webspatial/react-sdk'
+    }),
+    webSpatial({
+      outputDir: ""
+    }),
     createHtmlPlugin({
       inject: {
         data: {
@@ -16,4 +21,7 @@ export default defineConfig({
       },
     }),
   ],
+  define: {
+    XR_ENV_BASE: JSON.stringify(process.env.VITE_BASE || "/"),
+  },
 });

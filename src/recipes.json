@@ -892,7 +892,7 @@
     "id": "mi-hoanh-thanh",
     "name": "Mì Hoành Thánh",
     "englishName": "Egg Noodle Soup with Wontons",
-    "image": "./assets/images/mi-hoanh-thanh.png",
+    "image": "/assets/images/mi-hoanh-thanh.png",
     "estimatedTime": 70,
     "description": "Mì Hoành Thánh is a comforting noodle soup with springy egg noodles, delicate pork and shrimp wontons, and clear, fragrant broth. It is often served with leafy greens and sometimes slices of Chinese BBQ pork (xá xíu).",
     "ingredients": [
@@ -976,7 +976,7 @@
     "id": "thit-nuong",
     "name": "Thịt Nướng",
     "englishName": "Vietnamese Grilled Pork",
-    "image": "./assets/images/thit-nuong.png",
+    "image": "/assets/images/thit-nuong.png",
     "estimatedTime": 75,
     "description": "Thịt Nướng features thinly sliced pork shoulder marinated in lemongrass, garlic, sugar, fish sauce, and other seasonings, then grilled or broiled to a caramelized finish. Commonly served with rice noodles (bún), herbs, pickled vegetables, or in a bánh mì sandwich.",
     "ingredients": [
@@ -1050,7 +1050,7 @@
     "id": "thit-kho-trung",
     "name": "Thịt Kho Trứng",
     "englishName": "Vietnamese Braised Pork with Eggs",
-    "image": "./assets/images/thit-kho-trung.png",
+    "image": "/assets/images/thit-kho-trung.png",
     "estimatedTime": 110,
     "description": "Thịt Kho Trứng is a southern Vietnamese comfort dish of pork belly and eggs slowly braised in coconut water, fish sauce, and caramelized sugar. The meat becomes meltingly tender and the eggs soak up the rich, savory-sweet sauce.",
     "ingredients": [
@@ -1127,7 +1127,7 @@
     "id": "hu-tieu",
     "name": "Hủ Tiếu",
     "englishName": "Vietnamese Pork and Seafood Noodle Soup",
-    "image": "./assets/images/hu-tieu.png",
+    "image": "/assets/images/hu-tieu.png",
     "estimatedTime": 120,
     "description": "Hủ Tiếu is a savory, aromatic noodle soup from southern Vietnam, distinguished by its delicate clear pork broth, chewy rice noodles, sliced pork, shrimp or seafood, fried garlic, and crisp vegetables. It’s often served with fresh bean sprouts and lime.",
     "ingredients": [
@@ -1292,7 +1292,7 @@
     "id": "bun-bo-hue",
     "name": "Bún Bò Huế",
     "englishName": "Spicy Vietnamese Beef Noodle Soup",
-    "image": "./assets/images/bun-bo-hue.png",
+    "image": "/assets/images/bun-bo-hue.png",
     "estimatedTime": 195,
     "description": "Bún Bò Huế is a central Vietnamese noodle soup famous for its spicy, lemongrass-infused beef broth, thick rice vermicelli, sliced beef, pork hock, and pork blood cake (optional), all garnished with fresh herbs, lime, and chili.",
     "ingredients": [

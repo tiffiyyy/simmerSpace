@@ -145,12 +145,14 @@
         "step": "Quick boil the bones and beef brisket for 5 minutes to remove impurities. Rinse everything clean.",
         "note": "Ensures a clear broth.",
         "time": 5,
+        "video":"https://youtu.be/bcKEPZcVa3Q?si=1CnX5cFW0Lp6j72d&t=64", 
         "stepIngredients": ["Meaty beef bones", "Marrow bones (leg, knuckle)", "Beef brisket", "Water"]
       },
       {
         "step": "In a large pot, add bones, brisket, charred onion, ginger, and toasted spices. Cover with water (~3.5L).",
         "note": "",
         "time": 0,
+        "video":"https://youtu.be/bcKEPZcVa3Q?si=1CnX5cFW0Lp6j72d&t=78",
         "stepIngredients": [
           "Meaty beef bones",
           "Marrow bones (leg, knuckle)",
@@ -188,20 +190,20 @@
         "step": "Remove brisket, set aside. Continue simmering bones 40 more minutes.",
         "note": "Slice brisket for serving.",
         "time": 40,
+        "video":"https://www.youtube.com/watch?v=MrgdrReEwkM&t=361",
         "stepIngredients": ["Beef brisket", "Meaty beef bones", "Marrow bones (leg, knuckle)", "Water"]
-
       },
       {
         "step": "Strain the broth. Season with fish sauce, sugar, and salt.",
         "note": "Adjust seasoning to taste.",
         "time": 0,
         "stepIngredients": ["Fish sauce", "White sugar", "Salt"]
-
       },
       {
         "step": "Cook rice noodles according to package instructions.",
         "note": "",
         "time": 0,
+        "video":"https://www.youtube.com/watch?v=MrgdrReEwkM&t=374",
         "stepIngredients": ["Rice noodles", "Water"]
 
       },
@@ -290,6 +292,7 @@
         "step": "Chop noodles and mushrooms",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=azJVUd-jbJY&t=56", 
         "stepIngredients": ["Bean thread noodles", "Wood ear mushrooms"]
       },
       {
@@ -483,17 +486,24 @@
       { "item": "Bird's eye chili", "quantity": "2", "unit": "sliced" }
     ],
     "steps": [
-      { "step": "Soak mung beans overnight", "note": "", "time": 0 },
+      { 
+        "step": "Soak mung beans overnight", 
+        "note": "", 
+        "time": 0, 
+        "video": "https://www.youtube.com/watch?v=fI43827ihwU&t=57"
+      },
       {
         "step": "Soak dried shrimp in warm water for 2 hours",
         "note": "",
         "time": 120,
+        "vide": "https://www.youtube.com/watch?v=hbeQtmKd6-Q&t=223", 
         "stepIngredients": ["Dried shrimp", "Water"]
       },
       {
         "step": "Boil soaked mung beans in water until tender (about 30 minutes)",
         "note": "",
         "time": 30,
+        "video": "https://www.youtube.com/watch?v=kaVC0Wv7-x8&t=43",
         "stepIngredients": ["Dried split mung beans", "Water"]
       },
       {
@@ -533,6 +543,7 @@
         "step": "Make scallion oil by heating oil and briefly frying green onions",
         "note": "",
         "time": 0,
+        "video": "https://youtube.com/shorts/KX-x1WCSNaA?si=KBDRqPt7e9gSL5l5", 
         "stepIngredients": ["Vegetable oil", "Green onions"]
       },
       {
@@ -586,6 +597,7 @@
         "step": "Mix rice flour, cornstarch, turmeric powder, salt, coconut milk, water, and sliced green onions into a smooth batter",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=ws617BJj5l4&t=439", 
         "stepIngredients": [
           "Rice flour",
           "Cornstarch",
@@ -606,6 +618,7 @@
         "step": "Heat a nonstick skillet over medium-high and add a little oil",
         "note": "",
         "time": 0,
+        "video": "https://youtu.be/ws617BJj5l4?si=fn3qudxu9zmFJ-aB&t=622",
         "stepIngredients": ["Vegetable oil"]
       },
       {
@@ -623,15 +636,21 @@
         "stepIngredients": ["Rice flour", "Cornstarch", "Ground turmeric", "Coconut milk", "Water", "Green onions"]
 
       },
-      { "step": "Top with bean sprouts", "note": "", "time": 0 ,"stepIngredients": ["Vegetable oil"] },
+      { 
+        "step": "Top with bean sprouts", 
+        "note": "", 
+        "time": 0 ,
+        "stepIngredients": ["Vegetable oil"] 
+      },
       {
         "step": "Cover and cook until edges are crispy and bottom is golden (about 4 minutes)",
         "note": "",
         "time": 4,
+        "video": "https://youtu.be/ws617BJj5l4?si=fn3qudxu9zmFJ-aB&t=702",
         "stepIngredients": ["Rice flour", "Pork belly", "Shrimp", "Bean sprouts"]
       },
       {
-        "step": "Fold crepe in half and slide onto a plate",
+        "step": "Fold the bánh xèo in half and slide onto a plate",
         "note": "",
         "time": 0,
         "stepIngredients": []
@@ -680,6 +699,7 @@
         "step": "Soak glutinous rice and mung beans in water for several hours.",
         "note": "",
         "time": 240,
+        "video": "https://www.youtube.com/watch?v=kaVC0Wv7-x8&t=43",
         "stepIngredients": ["Glutinous rice", "Peeled split mung beans", "Water"]
       },
       {
@@ -696,8 +716,9 @@
       },
       {
         "step": "Rinse and dry banana leaves, cut to size for wrapping.",
-        "note": "",
+        "note": "Although the video notes to fill up your sink with water to clean the leaves, you can also take a wet paper towel to wipe off the wax/debris.",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=AVoFGmwrVPw&t=89", 
         "stepIngredients": ["Banana leaves"]
       },
       {
@@ -722,12 +743,12 @@
     ]
   },
   {
-    "id": "banh-dau-xanh",
-    "name": "Bánh Đậu Xanh",
+    "id": "banh-da-lon",
+    "name": "Bánh Da Lợn",
     "englishName": "Vietnamese Pandan Layer Cake",
-    "image": "/assets/images/banh-dau-xanh.png",
+    "image": "/assets/images/banh-da-lon.png",
     "estimatedTime": 55,
-    "description": "Bánh Đậu Xanh is a Vietnamese steamed pandan cake, recognized for its beautiful green color and soft, chewy layers. Made with rice flour, tapioca starch, pandan extract, sugar, and coconut milk, it's a fragrant, lightly sweet treat often enjoyed as a snack or at celebrations.",
+    "description": "Bánh Da Lợn is a Vietnamese steamed pandan cake, recognized for its beautiful green color and soft, chewy layers. Made with rice flour, tapioca starch, pandan extract, sugar, and coconut milk, it's a fragrant, lightly sweet treat often enjoyed as a snack or at celebrations.",
     "ingredients": [
       { "item": "Rice flour", "quantity": "1", "unit": "cup" },
       { "item": "Tapioca starch", "quantity": "4", "unit": "tbsp" },
@@ -740,21 +761,28 @@
     "steps": [
       {
         "step": "Mix rice flour, tapioca starch, sugar, salt, coconut milk, and pandan extract in a bowl until smooth",
-        "note": "",
+        "note": "If you'd like multiple colors, make sure to split the batter into two bowls and add food coloring to one.",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=VGce3Fhu4rM&t=125", 
         "stepIngredients": ["Rice flour", "Tapioca starch", "Sugar", "Salt", "Coconut milk", "Pandan extract"]
       },
-      { "step": "Lightly grease a cake pan with oil", "note": "", "time": 0 },
+      { 
+        "step": "Lightly grease a cake pan with oil", 
+        "note": "", 
+        "time": 0 
+      },
       {
         "step": "Pour a thin layer of batter into the cake pan and steam until set (about 7 minutes)",
         "note": "",
         "time": 7,
+        "video": "https://www.youtube.com/watch?v=VGce3Fhu4rM&t=388", 
         "stepIngredients": ["Rice flour", "Tapioca starch", "Sugar", "Salt", "Coconut milk", "Pandan extract"]
       },
       {
         "step": "Pour another layer of batter and steam until set (about 7 minutes)",
         "note": "",
         "time": 7,
+        "video": "https://www.youtube.com/watch?v=VGce3Fhu4rM&t=408", 
         "stepIngredients": ["Rice flour", "Tapioca starch", "Sugar", "Salt", "Coconut milk", "Pandan extract"]
       },
       {
@@ -767,6 +795,7 @@
         "step": "Let cake cool completely before removing from pan and slicing",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=VGce3Fhu4rM&t=580", 
         "stepIngredients": []
       }
     ]
@@ -799,9 +828,11 @@
         "note": "", 
         "time": 0, 
         "stepIngredients": ["Mung beans (hulled, split)", "Water"] },
-      { "step": "Soak mung beans for 1-2 hours", 
-        "note": "", 
+      { 
+        "step": "Soak mung beans for 1-2 hours", 
+        "note": "Although the video states to soak for 12-24 hours, this recipe only requires the mung beans to be soaked for 1-2 hours.", 
         "time": 60, 
+        "video": "https://www.youtube.com/watch?v=kaVC0Wv7-x8&t=43",
         "stepIngredients": ["Mung beans (hulled, split)", "Water"] },
       {
         "step": "Boil mung beans until soft (about 30 minutes)",
@@ -813,6 +844,7 @@
         "step": "Mash cooked mung beans with coconut milk, sugar, and salt for the filling",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=vRIZtClHztc&t=132", 
         "stepIngredients": ["Mung beans (hulled, split)", "Coconut milk", "Sugar", "Salt"]
       },
       {
@@ -832,17 +864,20 @@
         "step": "Divide dough into small balls and flatten to wrap around a small amount of mung bean filling",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=vRIZtClHztc&t=491", 
         "stepIngredients": ["Glutinous rice flour", "Mung beans (hulled, split)"]      },
       {
         "step": "Seal and roll each ball in sesame seeds to coat",
         "note": "",
         "time": 0,
+        "video": "https://www.youtube.com/watch?v=vRIZtClHztc&t=532", 
         "stepIngredients": ["Sesame seeds"]
       },
       {
         "step": "Heat oil to 325°F (163°C) and deep fry the balls until golden brown (about 8-10 minutes per batch)",
         "note": "Stir often for even browning",
         "time": 10,
+        "video": "https://www.youtube.com/watch?v=vRIZtClHztc&t=663", 
         "stepIngredients": ["Vegetable oil"]
       },
       {
@@ -857,7 +892,7 @@
     "id": "mi-hoanh-thanh",
     "name": "Mì Hoành Thánh",
     "englishName": "Egg Noodle Soup with Wontons",
-    "image": "/assets/images/mi-hoanh-thanh.png",
+    "image": "./assets/images/mi-hoanh-thanh.png",
     "estimatedTime": 70,
     "description": "Mì Hoành Thánh is a comforting noodle soup with springy egg noodles, delicate pork and shrimp wontons, and clear, fragrant broth. It is often served with leafy greens and sometimes slices of Chinese BBQ pork (xá xíu).",
     "ingredients": [
@@ -886,14 +921,16 @@
     "steps": [
       {
         "step": "Mix ground pork, chopped shrimp, green onions, soy sauce, sesame oil, white pepper, and salt to make wonton filling",
-        "note": "",
+        "note": "Food processor is ideal but if you don't have one, you can use a bowl and a fork to mix.",
         "time": 0,
+        "video":"https://youtu.be/opY0SreshVA?si=9uyxPdH9TriIsj0K&t=129",
         "stepIngredients": ["Ground pork", "Shrimp", "Green onion", "Soy sauce", "Sesame oil", "White pepper", "Salt"]
       },
       {
         "step": "Place a teaspoon of filling in each wonton wrapper and fold to seal",
         "note": "",
         "time": 0,
+        "video":"https://youtu.be/opY0SreshVA?si=uFC9SCOz_Uqp4GEB&t=342",
         "stepIngredients": ["Wonton wrappers", "Ground pork", "Shrimp"]
       },
       {
@@ -939,7 +976,7 @@
     "id": "thit-nuong",
     "name": "Thịt Nướng",
     "englishName": "Vietnamese Grilled Pork",
-    "image": "/assets/images/thit-nuong.png",
+    "image": "./assets/images/thit-nuong.png",
     "estimatedTime": 75,
     "description": "Thịt Nướng features thinly sliced pork shoulder marinated in lemongrass, garlic, sugar, fish sauce, and other seasonings, then grilled or broiled to a caramelized finish. Commonly served with rice noodles (bún), herbs, pickled vegetables, or in a bánh mì sandwich.",
     "ingredients": [
@@ -970,9 +1007,17 @@
         "stepIngredients": ["Garlic", "Shallots", "Lemongrass", "Sugar", "Fish sauce", "Soy sauce", "Honey", "Black pepper", "Vegetable oil"]
       },
       {
+        "step": "Cut your pork into thin slices.",
+        "note": "",
+        "time": 0,
+        "video":"https://youtu.be/dY1ZAR7Vplg?si=GlqCvGaXun3nrbpk&t=51",
+        "stepIngredients": ["Pork shoulder (or pork chops)"]
+      },
+      {
         "step": "Add sliced pork to the marinade and mix thoroughly",
         "note": "",
         "time": 0,
+        "video":"https://youtu.be/dY1ZAR7Vplg?si=wyu_0u63XLyDEWOS&t=205",
         "stepIngredients": ["Pork shoulder (or pork chops)"]
       },
       {
@@ -990,7 +1035,7 @@
       {
         "step": "Grill pork slices until caramelized and cooked through (about 3-5 minutes per side)",
         "note": "",
-        "time": 10,
+        "time": 0,
         "stepIngredients": ["Pork shoulder (or pork chops)"]
       },
       {
@@ -1005,7 +1050,7 @@
     "id": "thit-kho-trung",
     "name": "Thịt Kho Trứng",
     "englishName": "Vietnamese Braised Pork with Eggs",
-    "image": "/assets/images/thit-kho-trung.png",
+    "image": "./assets/images/thit-kho-trung.png",
     "estimatedTime": 110,
     "description": "Thịt Kho Trứng is a southern Vietnamese comfort dish of pork belly and eggs slowly braised in coconut water, fish sauce, and caramelized sugar. The meat becomes meltingly tender and the eggs soak up the rich, savory-sweet sauce.",
     "ingredients": [
@@ -1035,12 +1080,14 @@
         "step": "Make caramel by heating sugar in a pot until melted and deep amber",
         "note": "",
         "time": 0,
+        "video":"https://youtu.be/GE7qJ3cJlHw?si=03AeOglwZ7KLq1mU&t=149",
         "stepIngredients": ["Brown sugar or rock sugar"]
       },
       {
-        "step": "Add pork belly to the caramel and sear briefly",
+        "step": "Add pork belly to the caramel and sear while mixing until pork is browned.",
         "note": "",
         "time": 0,
+        "video":"https://youtu.be/GE7qJ3cJlHw?si=03AeOglwZ7KLq1mU&t=149",
         "stepIngredients": ["Pork belly"]
       },
       {
@@ -1065,6 +1112,7 @@
         "step": "Add the peeled eggs to the pot and continue to simmer uncovered for 30 minutes",
         "note": "",
         "time": 30,
+        "video":"https://youtu.be/mY2Sr6aK1zs?si=xyTk9poDL9jUueOS&t=677",
         "stepIngredients": ["Eggs"]
       },
       {
@@ -1079,7 +1127,7 @@
     "id": "hu-tieu",
     "name": "Hủ Tiếu",
     "englishName": "Vietnamese Pork and Seafood Noodle Soup",
-    "image": "/assets/images/hu-tieu.png",
+    "image": "./assets/images/hu-tieu.png",
     "estimatedTime": 120,
     "description": "Hủ Tiếu is a savory, aromatic noodle soup from southern Vietnam, distinguished by its delicate clear pork broth, chewy rice noodles, sliced pork, shrimp or seafood, fried garlic, and crisp vegetables. It’s often served with fresh bean sprouts and lime.",
     "ingredients": [
@@ -1120,25 +1168,27 @@
     ],
     "steps": [
       {
-        "step": "Blanch pork bones in boiling water for 5 minutes, then rinse",
+        "step": "Blanch pork bones in boiling water for 5 minutes, then rinse with cold water.",
         "note": "",
         "time": 5,
+        "video":"https://youtu.be/00VCQg6fWs4?si=hvX2-Sw99y-eM3mL&t=70",
         "stepIngredients": ["Pork bones", "Water"]
       },
       {
         "step": "In a clean pot, add pork bones, dried squid/shrimp, daikon, and onion, cover with water and simmer for at least 90 minutes",
         "note": "",
-        "time": 90,
+        "time": 60,
         "stepIngredients": ["Pork bones", "Dried squid or dried shrimp", "Daikon", "Onion", "Water"]
       },
       {
         "step": "Remove bones and vegetables from broth, season with fish sauce, sugar, salt",
         "note": "",
         "time": 0,
+        "video":"https://youtu.be/00VCQg6fWs4?si=zMNCNnJ9eyaYI3A4&t=439",
         "stepIngredients": ["Fish sauce", "Sugar", "Salt"]
       },
       {
-        "step": "Boil pork shoulder slices in broth until just cooked (about 5 minutes), remove and set aside",
+        "step": "Cut and boil pork shoulder slices in broth until just cooked (about 5 minutes), remove and set aside",
         "note": "",
         "time": 5,
         "stepIngredients": ["Pork shoulder", "Pork bones (broth)"]
@@ -1242,7 +1292,7 @@
     "id": "bun-bo-hue",
     "name": "Bún Bò Huế",
     "englishName": "Spicy Vietnamese Beef Noodle Soup",
-    "image": "/assets/images/bun-bo-hue.png",
+    "image": "./assets/images/bun-bo-hue.png",
     "estimatedTime": 195,
     "description": "Bún Bò Huế is a central Vietnamese noodle soup famous for its spicy, lemongrass-infused beef broth, thick rice vermicelli, sliced beef, pork hock, and pork blood cake (optional), all garnished with fresh herbs, lime, and chili.",
     "ingredients": [
@@ -1289,6 +1339,7 @@
         "step": "Blanch beef shank and pork hock in boiling water for 3 minutes, then rinse",
         "note": "",
         "time": 3,
+        "video":"https://youtu.be/GRDGAH4lObg?si=ZH32tr6TE3PYNcOl&t=61",
         "stepIngredients": ["Beef shank or brisket", "Pork hock", "Water"]
       },
       {

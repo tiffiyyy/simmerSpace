@@ -152,7 +152,13 @@ function Steps() {
         {/* Video/Image Display (Top Center) */}
         <button 
                     className="video-link"
-                    onClick={() => stepVideo && window.open(stepVideo, '_blank', 'noopener,noreferrer')}
+                    onClick={() => 
+                    {
+                      if(stepVideo) {
+                        window.location.href = stepVideo;
+                      }
+                    }
+                    }
                   >
         <div className="media-display">
           
